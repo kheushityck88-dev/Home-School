@@ -87,6 +87,12 @@ h1,h2,h3,h4{
   max-height: 72vh;
   overflow:hidden;
 }
+@media (max-width: 600px){
+  .hero-photo-strip{
+    aspect-ratio: 4 / 5;   /* plus vertical sur mobile pour que la photo reste visible et grande */
+    max-height: 62vh;
+  }
+}
 .hero-photo-img{
   width:100%; height:100%; object-fit:cover; object-position:center center;
   display:block;
@@ -161,21 +167,11 @@ h1,h2,h3,h4{
   background: var(--yellow);
   color: var(--ink);
 }
-.cta-split-main:hover{
-  background: var(--yellow-dark);
-  color: var(--ink);
-  box-shadow: 0 0 0 4px rgba(255,194,46,0.18);
-}
 .cta-split-main i{ transition: transform .2s ease; }
-.cta-split-main:hover i{ transform: translateX(5px); }
 .cta-split-secondary{
   background: rgba(255,255,255,0.12);
   color:#fff;
   border-left: 1px solid rgba(255,255,255,0.2);
-}
-.cta-split-secondary:hover{
-  background:#fff;
-  color: var(--blue);
 }
 
 /* ---------- Ticker défilant (remplace la grille de chiffres) ---------- */
@@ -189,7 +185,6 @@ h1,h2,h3,h4{
   display:inline-flex;
   animation: tickerScroll 22s linear infinite;
 }
-.ticker:hover .ticker-track{ animation-play-state: paused; }
 .ticker-set{
   display:inline-flex;
   align-items:center;
@@ -229,19 +224,16 @@ h1,h2,h3,h4{
   color: var(--ink);
   box-shadow: var(--shadow-lift);
 }
-.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 18px 34px -10px rgba(224,164,0,0.5), 0 0 0 4px rgba(255,194,46,0.18); background: var(--yellow-dark); }
 .btn-outline{
   background:transparent;
   color: var(--white);
   border:1.5px solid rgba(255,255,255,0.5);
 }
-.btn-outline:hover{ background: rgba(255,255,255,0.12); border-color:#fff; transform: translateY(-3px); }
 .btn-dark-outline{
   background:transparent;
   color: var(--blue);
   border:1.5px solid var(--blue);
 }
-.btn-dark-outline:hover{ background: var(--blue); color:#fff; transform: translateY(-3px); }
 
 /* ---------- Nav ---------- */
 .site-nav{
@@ -263,7 +255,7 @@ h1,h2,h3,h4{
   background: var(--gold);
   transition: width .2s ease;
 }
-.nav-link:hover::after, .nav-link.active::after{ width:100%; }
+.nav-link.active::after{ width:100%; }
 .nav-link.active{ color:#fff; }
 
 #mobile-menu{
@@ -304,11 +296,6 @@ h1,h2,h3,h4{
   transform: scaleX(0); transform-origin:left;
   transition: transform .3s ease;
   z-index:2;
-}
-.card-formation:hover::before{ transform: scaleX(1); }
-.card-formation:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 26px 48px -18px rgba(6,6,145,0.55);
 }
 .card-formation-soon-banner{
   display:flex; align-items:center; gap:1.2rem;
@@ -358,7 +345,6 @@ h1,h2,h3,h4{
   margin-top:1rem; font-weight:700; font-size:.88rem; color: var(--blue);
   transition: gap .2s ease, color .2s ease;
 }
-.card-formation:hover .card-formation-more{ gap:.65rem; color: var(--gold-dark, #B8891A); }
 
 /* ---------- Modal détails formation ---------- */
 #formationModal{
@@ -389,7 +375,6 @@ h1,h2,h3,h4{
   border:none; cursor:pointer;
   transition: background .2s ease;
 }
-#formationModalClose:hover{ background:rgba(255,255,255,0.32); }
 .formation-modal-head{
   background: linear-gradient(150deg, var(--blue-deep) 0%, var(--blue) 65%, var(--blue-light) 130%);
   padding: 2.2rem 1.8rem;
@@ -430,12 +415,6 @@ h1,h2,h3,h4{
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   overflow:hidden;
 }
-.card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px -10px rgba(6,6,145,0.55);
-  border-color: var(--gold);
-}
-
 .link-cta{
   display:inline-flex; align-items:center; gap:.4rem;
   font-weight:700; position:relative; padding-bottom:.2rem;
@@ -444,9 +423,7 @@ h1,h2,h3,h4{
   content:""; position:absolute; left:0; bottom:0; width:100%; height:1.5px;
   background: currentColor; opacity:.4; transition: opacity .2s ease;
 }
-.link-cta:hover::after{ opacity:1; }
 .link-cta i{ transition: transform .2s ease; }
-.link-cta:hover i{ transform: translate(2px,-2px); }
 
 .tag{
   font-family: var(--font-mono);
@@ -504,7 +481,6 @@ h1,h2,h3,h4{
   border:none; cursor:pointer;
 }
 #backToTop.show{ opacity:1; pointer-events:auto; transform:none; }
-#backToTop:hover{ box-shadow: 0 14px 32px -8px rgba(6,6,145,0.5); transform: translateY(-3px); }
 #backToTop svg{ position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); }
 #backToTop circle{ fill:none; stroke-width:3; }
 #backToTop .ring-bg{ stroke: var(--gray-mid); }
@@ -569,7 +545,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background:#fff;
   transition: all .2s ease;
 }
-.filter-btn:hover{ border-color: var(--blue); }
 .filter-btn.filter-active{ background: var(--blue); color:#fff; border-color:var(--blue); }
 
 /* FAQ accordion */
@@ -587,3 +562,43 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   opacity:0; pointer-events:none; transition:opacity .25s ease;
 }
 #lightbox.show{ opacity:1; pointer-events:auto; }
+
+/* =========================================================
+   Effets :hover — regroupés ici et limités aux appareils
+   avec un vrai pointeur (souris/trackpad). Sur mobile/tactile,
+   ces styles ne s'appliquent pas, ce qui évite l'effet
+   "bouton resté appuyé" après un tap.
+   ========================================================= */
+@media (hover: hover) and (pointer: fine){
+  .cta-split-main:hover{
+    background: var(--yellow-dark);
+    color: var(--ink);
+    box-shadow: 0 0 0 4px rgba(255,194,46,0.18);
+  }
+  .cta-split-main:hover i{ transform: translateX(5px); }
+  .cta-split-secondary:hover{
+    background:#fff;
+    color: var(--blue);
+  }
+  .ticker:hover .ticker-track{ animation-play-state: paused; }
+  .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 18px 34px -10px rgba(224,164,0,0.5), 0 0 0 4px rgba(255,194,46,0.18); background: var(--yellow-dark); }
+  .btn-outline:hover{ background: rgba(255,255,255,0.12); border-color:#fff; transform: translateY(-3px); }
+  .btn-dark-outline:hover{ background: var(--blue); color:#fff; transform: translateY(-3px); }
+  .nav-link:hover::after{ width:100%; }
+  .card-formation:hover::before{ transform: scaleX(1); }
+  .card-formation:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 26px 48px -18px rgba(6,6,145,0.55);
+  }
+  .card-formation:hover .card-formation-more{ gap:.65rem; color: var(--gold-dark, #B8891A); }
+  #formationModalClose:hover{ background:rgba(255,255,255,0.32); }
+  .card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px -10px rgba(6,6,145,0.55);
+    border-color: var(--gold);
+  }
+  .link-cta:hover::after{ opacity:1; }
+  .link-cta:hover i{ transform: translate(2px,-2px); }
+  #backToTop:hover{ box-shadow: 0 14px 32px -8px rgba(6,6,145,0.5); transform: translateY(-3px); }
+  .filter-btn:hover{ border-color: var(--blue); }
+}
