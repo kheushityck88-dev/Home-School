@@ -87,12 +87,6 @@ h1,h2,h3,h4{
   max-height: 72vh;
   overflow:hidden;
 }
-@media (max-width: 600px){
-  .hero-photo-strip{
-    aspect-ratio: 4 / 5;   /* plus vertical sur mobile pour que la photo reste visible et grande */
-    max-height: 62vh;
-  }
-}
 .hero-photo-img{
   width:100%; height:100%; object-fit:cover; object-position:center center;
   display:block;
@@ -168,10 +162,19 @@ h1,h2,h3,h4{
   color: var(--ink);
 }
 .cta-split-main i{ transition: transform .2s ease; }
+.cta-split-main:active i{ transform: translateX(5px); }
 .cta-split-secondary{
   background: rgba(255,255,255,0.12);
   color:#fff;
   border-left: 1px solid rgba(255,255,255,0.2);
+}
+.cta-split-main:active{
+  background: var(--yellow-dark);
+  color: var(--ink);
+}
+.cta-split-secondary:active{
+  background:#fff;
+  color: var(--blue);
 }
 
 /* ---------- Ticker défilant (remplace la grille de chiffres) ---------- */
@@ -297,6 +300,11 @@ h1,h2,h3,h4{
   transition: transform .3s ease;
   z-index:2;
 }
+.card-formation:active::before{ transform: scaleX(1); }
+.card-formation:active{
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px -18px rgba(6,6,145,0.55);
+}
 .card-formation-soon-banner{
   display:flex; align-items:center; gap:1.2rem;
   flex-wrap:wrap;
@@ -345,6 +353,7 @@ h1,h2,h3,h4{
   margin-top:1rem; font-weight:700; font-size:.88rem; color: var(--blue);
   transition: gap .2s ease, color .2s ease;
 }
+.card-formation:active .card-formation-more{ gap:.65rem; color: var(--gold-dark, #B8891A); }
 
 /* ---------- Modal détails formation ---------- */
 #formationModal{
@@ -375,6 +384,7 @@ h1,h2,h3,h4{
   border:none; cursor:pointer;
   transition: background .2s ease;
 }
+#formationModalClose:active{ background:rgba(255,255,255,0.32); }
 .formation-modal-head{
   background: linear-gradient(150deg, var(--blue-deep) 0%, var(--blue) 65%, var(--blue-light) 130%);
   padding: 2.2rem 1.8rem;
@@ -415,6 +425,11 @@ h1,h2,h3,h4{
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   overflow:hidden;
 }
+.card:active{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px -10px rgba(6,6,145,0.55);
+  border-color: var(--gold);
+}
 .link-cta{
   display:inline-flex; align-items:center; gap:.4rem;
   font-weight:700; position:relative; padding-bottom:.2rem;
@@ -424,6 +439,8 @@ h1,h2,h3,h4{
   background: currentColor; opacity:.4; transition: opacity .2s ease;
 }
 .link-cta i{ transition: transform .2s ease; }
+.link-cta:active::after{ opacity:1; }
+.link-cta:active i{ transform: translate(2px,-2px); }
 
 .tag{
   font-family: var(--font-mono);
@@ -481,6 +498,7 @@ h1,h2,h3,h4{
   border:none; cursor:pointer;
 }
 #backToTop.show{ opacity:1; pointer-events:auto; transform:none; }
+#backToTop:active{ box-shadow: 0 14px 32px -8px rgba(6,6,145,0.5); transform: translateY(-3px); }
 #backToTop svg{ position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); }
 #backToTop circle{ fill:none; stroke-width:3; }
 #backToTop .ring-bg{ stroke: var(--gray-mid); }
@@ -546,6 +564,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: all .2s ease;
 }
 .filter-btn.filter-active{ background: var(--blue); color:#fff; border-color:var(--blue); }
+.filter-btn:active{ border-color: var(--blue); }
 
 /* FAQ accordion */
 .faq-item .faq-chevron{ transition: transform .25s ease; }
