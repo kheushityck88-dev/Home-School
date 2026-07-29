@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — HOME SCHOOL</title>
+<meta name="description" content="Réponses aux questions fréquentes sur les formations, l'admission et le financement chez HOME SCHOOL.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="nav-logo-badge"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-8 md:h-9 w-auto object-contain"></span>
+      <span class="hidden md:inline-block w-px h-7 mx-2" style="background:rgba(255,255,255,0.18)"></span>
+      <span class="hidden md:block text-[11px] font-semibold tracking-wide" style="color:rgba(255,255,255,0.65)">CENTRE DE<br>FORMATION NUMÉRIQUE</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link active">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex btn btn-primary text-sm">Nous rejoindre</a>
+    <button id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" class="lg:hidden p-2">
+      <i data-lucide="menu" class="icon-open w-7 h-7" style="color:#fff"></i>
+      <i data-lucide="x" class="icon-close hidden w-7 h-7" style="color:#fff"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t" style="border-color:rgba(255,255,255,0.12)">
+    <div class="flex flex-col px-5 py-4 gap-4">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link active">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-primary text-sm justify-center mt-2">Nous rejoindre</a>
+    </div>
+  </div>
+</header>
+
+<section class="blue-gradient grid-pattern">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-20 text-center">
+    <span class="eyebrow" style="background:rgba(255,255,255,0.12); color:#fff; border-color:rgba(255,255,255,0.25)">Questions fréquentes</span>
+    <h1 class="font-display font-bold text-white text-3xl md:text-4xl mt-6">Questions fréquentes</h1>
+    <p class="text-white/80 max-w-2xl mx-auto mt-5">Tout ce qu'il faut savoir avant de rejoindre HOME SCHOOL.</p>
+  </div>
+</section>
+
+<section class="max-w-3xl mx-auto px-5 md:px-8 py-20">
+  <div class="space-y-4">
+
+    <div class="faq-item card reveal">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Faut-il déjà avoir des connaissances en informatique pour s'inscrire ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">Non. La plupart de nos formations sont accessibles aux débutants. Certains parcours avancés demandent des prérequis, précisés sur chaque fiche formation.</p></div>
+    </div>
+
+    <div class="faq-item card reveal reveal-delay-1">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Comment se déroule le processus d'admission ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">Dépôt du dossier en ligne, test de positionnement, puis entretien de motivation avec un conseiller pédagogique. Réponse sous une semaine.</p></div>
+    </div>
+
+    <div class="faq-item card reveal reveal-delay-2">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Existe-t-il des solutions de financement ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">Oui, paiement en plusieurs fois, bourses partielles selon dossier et partenariats avec certaines entreprises pour les salariés en reconversion.</p></div>
+    </div>
+
+    <div class="faq-item card reveal">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Les formations sont-elles en présentiel ou à distance ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">La majorité des formations se déroulent au campus de Kaolack (Kasnack), avec des modules disponibles en ligne selon la formation choisie.</p></div>
+    </div>
+
+    <div class="faq-item card reveal reveal-delay-1">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Un accompagnement vers l'emploi est-il proposé après la formation ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">Oui, un service carrière aide chaque diplômé à préparer son CV, ses entretiens et le met en relation avec notre réseau d'entreprises partenaires.</p></div>
+    </div>
+
+    <div class="faq-item card reveal reveal-delay-2">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Les certifications délivrées sont-elles reconnues ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">Chaque formation est sanctionnée par une certification reconnue par nos entreprises partenaires, valorisable directement sur le marché de l'emploi.</p></div>
+    </div>
+
+    <div class="faq-item card reveal">
+      <button class="faq-question w-full flex items-center justify-between text-left p-6">
+        <span class="font-display font-semibold text-lg">Puis-je visiter le centre avant de m'inscrire ?</span>
+        <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 flex-shrink-0 ml-4" style="color:#fff"></i>
+      </button>
+      <div class="faq-answer px-6"><p class="pb-6" style="color:var(--ink-soft)">Bien sûr. Des journées portes ouvertes sont organisées régulièrement, et tu peux aussi prendre rendez-vous via notre page contact.</p></div>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-14 reveal">
+    <p style="color:var(--ink-soft)">D'autres questions ?</p>
+    <a href="contact.html" class="btn btn-primary mt-4">Contacter l'équipe</a>
+  </div>
+</section>
+
+<footer style="background:var(--ink); border-top:2px solid var(--gold)" class="text-white/70">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 grid md:grid-cols-4 gap-10">
+    <div>
+      <span class="footer-logo-badge mb-1"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-7 w-auto object-contain"></span>
+      <p class="text-sm mt-4 max-w-xs">Centre de formation professionnelle dédié aux métiers du numérique et de l'informatique.</p>
+      <a href="https://www.facebook.com/p/Home-School-Academy-61556890092962/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-white/80 hover:text-white transition">
+        <i data-lucide="facebook" class="w-4 h-4"></i>
+        Suivez-nous sur Facebook
+      </a>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Navigation</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white">À propos</a></li>
+        <li><a href="formations.html" class="hover:text-white">Formations</a></li>
+        <li><a href="galerie.html" class="hover:text-white">Galerie</a></li>
+        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Formations</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="formations.html" class="hover:text-white">Informatique Bureautique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Design Graphique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Création de site WordPress</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm font-mono">
+        <li>Kaolack (Kasnack), Sénégal</li>
+        <li>+221 77 161 70 44</li>
+        <li>homeschoolacademy221@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs font-mono">
+    © 2026 HOME SCHOOL — Tous droits réservés.
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 52 52"><circle class="ring-bg" cx="26" cy="26" r="22.5"></circle><circle class="ring-progress" id="backToTopRing" cx="26" cy="26" r="22.5"></circle></svg>
+  <i data-lucide="arrow-up" class="w-4 h-4"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

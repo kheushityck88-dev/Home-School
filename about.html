@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — HOME SCHOOL</title>
+<meta name="description" content="Découvrez l'histoire, la mission et les valeurs de HOME SCHOOL, centre de formation aux métiers du numérique.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="nav-logo-badge"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-8 md:h-9 w-auto object-contain"></span>
+      <span class="hidden md:inline-block w-px h-7 mx-2" style="background:rgba(255,255,255,0.18)"></span>
+      <span class="hidden md:block text-[11px] font-semibold tracking-wide" style="color:rgba(255,255,255,0.65)">CENTRE DE<br>FORMATION NUMÉRIQUE</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link active">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex btn btn-primary text-sm">Nous rejoindre</a>
+    <button id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" class="lg:hidden p-2">
+      <i data-lucide="menu" class="icon-open w-7 h-7" style="color:#fff"></i>
+      <i data-lucide="x" class="icon-close hidden w-7 h-7" style="color:#fff"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t" style="border-color:rgba(255,255,255,0.12)">
+    <div class="flex flex-col px-5 py-4 gap-4">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link active">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-primary text-sm justify-center mt-2">Nous rejoindre</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="blue-gradient grid-pattern">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-20 text-center">
+    <span class="eyebrow" style="background:rgba(255,255,255,0.12); color:#fff; border-color:rgba(255,255,255,0.25)">Notre histoire</span>
+    <h1 class="font-display font-bold text-white text-3xl md:text-4xl mt-6">L'humain derrière chaque formation</h1>
+    <p class="text-white/80 max-w-2xl mx-auto mt-5">HOME SCHOOL est né d'une conviction simple : les compétences numériques doivent être accessibles, concrètes et directement utiles sur le marché du travail.</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="max-w-7xl mx-auto px-5 md:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
+  <div class="reveal order-2 lg:order-1">
+    <img src="images/about/hero-home.jpg" alt="Formateur animant un cours à Home School Academy, Maison de la Jeunesse" class="rounded-2xl w-full h-[420px] object-cover" style="box-shadow:var(--shadow-soft)" loading="lazy">
+  </div>
+  <div class="reveal order-1 lg:order-2">
+    <div class="section-heading-line mb-4"></div>
+    <span class="eyebrow">Notre mission</span>
+    <h2 class="font-display font-bold text-2xl md:text-3xl mt-5">Former des profils opérationnels, pas seulement diplômés</h2>
+    <p class="mt-5" style="color:var(--ink-soft)">Chaque parcours à HOME SCHOOL est conçu avec des professionnels du secteur pour coller aux besoins réels des entreprises. Nos étudiants travaillent sur des projets concrets dès les premières semaines, encadrés par des formateurs en activité.</p>
+    <p class="mt-4" style="color:var(--ink-soft)">Nous croyons à une pédagogie exigeante mais bienveillante, où chacun avance à son rythme tout en étant challengé pour révéler son plein potentiel.</p>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section class="py-24 section-decorated" style="background:var(--gray-light)">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center reveal">
+      <span class="eyebrow">Nos valeurs</span>
+      <h2 class="font-display font-bold text-2xl md:text-3xl mt-5">Ce qui guide chacune de nos décisions</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6 mt-14">
+      <div class="card p-7 reveal">
+        <span class="font-mono text-sm font-bold" style="color:var(--gold)">01</span>
+        <h3 class="font-display font-semibold text-lg mt-2">Excellence</h3>
+        <p class="text-sm mt-2" style="color:var(--ink-soft)">Des standards élevés, à l'image des entreprises qui recrutent nos étudiants.</p>
+      </div>
+      <div class="card p-7 reveal reveal-delay-1">
+        <span class="font-mono text-sm font-bold" style="color:var(--gold)">02</span>
+        <h3 class="font-display font-semibold text-lg mt-2">Accessibilité</h3>
+        <p class="text-sm mt-2" style="color:var(--ink-soft)">Des formations ouvertes à tous les profils, avec des solutions de financement.</p>
+      </div>
+      <div class="card p-7 reveal reveal-delay-2">
+        <span class="font-mono text-sm font-bold" style="color:var(--gold)">03</span>
+        <h3 class="font-display font-semibold text-lg mt-2">Innovation</h3>
+        <p class="text-sm mt-2" style="color:var(--ink-soft)">Des programmes mis à jour en continu selon les évolutions du numérique.</p>
+      </div>
+      <div class="card p-7 reveal reveal-delay-3">
+        <span class="font-mono text-sm font-bold" style="color:var(--gold)">04</span>
+        <h3 class="font-display font-semibold text-lg mt-2">Communauté</h3>
+        <p class="text-sm mt-2" style="color:var(--ink-soft)">Un réseau d'anciens et de partenaires actif bien après la formation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section class="max-w-7xl mx-auto px-5 md:px-8 py-24">
+  <div class="text-center reveal">
+    <span class="eyebrow">Sur le terrain</span>
+    <h2 class="font-display font-bold text-2xl md:text-3xl mt-5">Nos étudiants, en pleine formation</h2>
+    <p class="mt-4 max-w-xl mx-auto" style="color:var(--ink-soft)">Des sessions pratiques, en présentiel à Kaolack, jusqu'à la remise des certificats.</p>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+    <img src="images/about/mosaic-01.jpg" alt="Groupe d'étudiants Home School Academy" class="rounded-xl w-full h-56 object-cover reveal" loading="lazy">
+    <img src="images/about/mosaic-02.jpg" alt="Étudiants portant le polo Home School Academy" class="rounded-xl w-full h-56 object-cover reveal reveal-delay-1 mt-8" loading="lazy">
+    <img src="images/about/mosaic-03.jpg" alt="Moment convivial entre étudiants" class="rounded-xl w-full h-56 object-cover reveal reveal-delay-2" loading="lazy">
+    <img src="images/about/mosaic-04.jpg" alt="Photo de groupe des étudiants Home School Academy" class="rounded-xl w-full h-56 object-cover reveal reveal-delay-3 mt-8" loading="lazy">
+  </div>
+  <div class="text-center mt-10 reveal">
+    <a href="galerie.html" class="link-cta" style="color:var(--blue)">Voir toute la galerie <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blue-gradient grid-pattern">
+  <div class="max-w-5xl mx-auto px-5 md:px-8 py-20 text-center reveal">
+    <h2 class="font-display font-bold text-2xl md:text-3xl text-white">Envie de rejoindre l'aventure HOME SCHOOL ?</h2>
+    <a href="formations.html" class="btn btn-primary mt-8">Découvrir nos formations</a>
+  </div>
+</section>
+
+<footer style="background:var(--ink); border-top:2px solid var(--gold)" class="text-white/70">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 grid md:grid-cols-4 gap-10">
+    <div>
+      <span class="footer-logo-badge mb-1"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-7 w-auto object-contain"></span>
+      <p class="text-sm mt-4 max-w-xs">Centre de formation professionnelle dédié aux métiers du numérique et de l'informatique.</p>
+      <a href="https://www.facebook.com/p/Home-School-Academy-61556890092962/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-white/80 hover:text-white transition">
+        <i data-lucide="facebook" class="w-4 h-4"></i>
+        Suivez-nous sur Facebook
+      </a>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Navigation</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white">À propos</a></li>
+        <li><a href="formations.html" class="hover:text-white">Formations</a></li>
+        <li><a href="galerie.html" class="hover:text-white">Galerie</a></li>
+        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Formations</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="formations.html" class="hover:text-white">Informatique Bureautique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Design Graphique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Création de site WordPress</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm font-mono">
+        <li>Kaolack (Kasnack), Sénégal</li>
+        <li>+221 77 161 70 44</li>
+        <li>homeschoolacademy221@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs font-mono">
+    © 2026 HOME SCHOOL — Tous droits réservés.
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 52 52"><circle class="ring-bg" cx="26" cy="26" r="22.5"></circle><circle class="ring-progress" id="backToTopRing" cx="26" cy="26" r="22.5"></circle></svg>
+  <i data-lucide="arrow-up" class="w-4 h-4"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

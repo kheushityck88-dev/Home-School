@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — HOME SCHOOL</title>
+<meta name="description" content="Contacte HOME SCHOOL pour toute question sur nos formations, l'admission ou le financement.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="nav-logo-badge"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-8 md:h-9 w-auto object-contain"></span>
+      <span class="hidden md:inline-block w-px h-7 mx-2" style="background:rgba(255,255,255,0.18)"></span>
+      <span class="hidden md:block text-[11px] font-semibold tracking-wide" style="color:rgba(255,255,255,0.65)">CENTRE DE<br>FORMATION NUMÉRIQUE</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex btn btn-primary text-sm">Nous rejoindre</a>
+    <button id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" class="lg:hidden p-2">
+      <i data-lucide="menu" class="icon-open w-7 h-7" style="color:#fff"></i>
+      <i data-lucide="x" class="icon-close hidden w-7 h-7" style="color:#fff"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t" style="border-color:rgba(255,255,255,0.12)">
+    <div class="flex flex-col px-5 py-4 gap-4">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="contact.html" class="btn btn-primary text-sm justify-center mt-2">Nous rejoindre</a>
+    </div>
+  </div>
+</header>
+
+<section class="blue-gradient grid-pattern">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-20 text-center">
+    <span class="eyebrow" style="background:rgba(255,255,255,0.12); color:#fff; border-color:rgba(255,255,255,0.25)">Contactez-nous</span>
+    <h1 class="font-display font-bold text-white text-3xl md:text-4xl mt-6">Parlons de ton projet</h1>
+    <p class="text-white/80 max-w-2xl mx-auto mt-5">Une question, un dossier à déposer ou juste envie d'en savoir plus ? Écris-nous.</p>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-5 md:px-8 py-20">
+  <div class="grid lg:grid-cols-[1fr_1.2fr] gap-14">
+
+    <!-- Infos -->
+    <div class="reveal space-y-6">
+      <div class="card p-6">
+        <div class="font-display font-semibold">Adresse</div><p class="text-sm mt-1" style="color:var(--ink-soft)">Quartier Kasnack, en face du CROUS Sine-Saloum, Kaolack, Sénégal</p>
+      </div>
+      <div class="card p-6">
+        <div class="font-display font-semibold">Téléphone</div><p class="text-sm mt-1" style="color:var(--ink-soft)">+221 77 161 70 44</p>
+      </div>
+      <div class="card p-6">
+        <div class="font-display font-semibold">Email</div><p class="text-sm mt-1" style="color:var(--ink-soft)">homeschoolacademy221@gmail.com</p>
+      </div>
+      <div class="card p-6">
+        <div class="font-display font-semibold">Horaires</div><p class="text-sm mt-1" style="color:var(--ink-soft)">Lundi – Vendredi : 8h30 – 18h00</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden" style="box-shadow:var(--shadow-soft)">
+        <iframe title="Localisation HOME SCHOOL ACADEMY Kaolack" src="https://www.google.com/maps?q=CROUS+Sine+Saloum+Kaolack+Senegal&output=embed" width="100%" height="220" style="border:0" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="card p-8 reveal reveal-delay-1">
+      <h2 class="font-display font-bold text-xl">Envoyer un message</h2>
+      <p class="text-sm mt-2" style="color:var(--ink-soft)">Réponse sous 24 à 48h ouvrées.</p>
+
+      <form id="contactForm" class="mt-8 grid sm:grid-cols-2 gap-5">
+        <div class="sm:col-span-1">
+          <label for="name" class="text-sm font-medium">Nom complet</label>
+          <input required type="text" id="name" name="name" class="w-full mt-2 px-4 py-3 rounded-lg border" style="border-color:var(--gray-mid)" placeholder="Awa Diallo">
+        </div>
+        <div class="sm:col-span-1">
+          <label for="email" class="text-sm font-medium">Email</label>
+          <input required type="email" id="email" name="email" class="w-full mt-2 px-4 py-3 rounded-lg border" style="border-color:var(--gray-mid)" placeholder="awa@email.com">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="formation" class="text-sm font-medium">Formation qui t'intéresse</label>
+          <select id="formation" name="formation" class="w-full mt-2 px-4 py-3 rounded-lg border bg-white" style="border-color:var(--gray-mid)">
+            <option>Informatique Bureautique</option>
+            <option>Design Graphique (Adobe Illustrator)</option>
+            <option>Design Graphique (Photoshop)</option>
+            <option>Création de site WordPress</option>
+            <option>Autre / je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="text-sm font-medium">Message</label>
+          <textarea required id="message" name="message" rows="5" class="w-full mt-2 px-4 py-3 rounded-lg border" style="border-color:var(--gray-mid)" placeholder="Parle-nous de ton projet..."></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="btn btn-primary w-full sm:w-auto" style="color:#0E0B2E">Envoyer le message</button>
+        </div>
+        <p id="formFeedback" class="sm:col-span-2 hidden text-sm p-4 rounded-lg" style="background:var(--blue-soft); color:var(--blue)"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer style="background:var(--ink); border-top:2px solid var(--gold)" class="text-white/70">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 grid md:grid-cols-4 gap-10">
+    <div>
+      <span class="footer-logo-badge mb-1"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-7 w-auto object-contain"></span>
+      <p class="text-sm mt-4 max-w-xs">Centre de formation professionnelle dédié aux métiers du numérique et de l'informatique.</p>
+      <a href="https://www.facebook.com/p/Home-School-Academy-61556890092962/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-white/80 hover:text-white transition">
+        <i data-lucide="facebook" class="w-4 h-4"></i>
+        Suivez-nous sur Facebook
+      </a>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Navigation</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white">À propos</a></li>
+        <li><a href="formations.html" class="hover:text-white">Formations</a></li>
+        <li><a href="galerie.html" class="hover:text-white">Galerie</a></li>
+        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Formations</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="formations.html" class="hover:text-white">Informatique Bureautique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Design Graphique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Création de site WordPress</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm font-mono">
+        <li>Kaolack (Kasnack), Sénégal</li>
+        <li>+221 77 161 70 44</li>
+        <li>homeschoolacademy221@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs font-mono">
+    © 2026 HOME SCHOOL — Tous droits réservés.
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 52 52"><circle class="ring-bg" cx="26" cy="26" r="22.5"></circle><circle class="ring-progress" id="backToTopRing" cx="26" cy="26" r="22.5"></circle></svg>
+  <i data-lucide="arrow-up" class="w-4 h-4"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

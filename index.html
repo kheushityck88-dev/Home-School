@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOME SCHOOL — Centre de formation aux métiers du numérique</title>
+<meta name="description" content="HOME SCHOOL forme les talents de demain aux métiers du numérique : développement web, data, cybersécurité, design et marketing digital.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="site-nav">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="nav-logo-badge"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-8 md:h-9 w-auto object-contain"></span>
+      <span class="hidden md:inline-block w-px h-7 mx-2" style="background:rgba(255,255,255,0.18)"></span>
+      <span class="hidden md:block text-[11px] font-semibold tracking-wide" style="color:rgba(255,255,255,0.65)">CENTRE DE<br>FORMATION NUMÉRIQUE</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html" class="nav-link active">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <a href="contact.html" class="hidden lg:inline-flex btn btn-primary text-sm">Nous rejoindre</a>
+    <button id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" class="lg:hidden p-2">
+      <i data-lucide="menu" class="icon-open w-7 h-7" style="color:#fff"></i>
+      <i data-lucide="x" class="icon-close hidden w-7 h-7" style="color:#fff"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="lg:hidden border-t" style="border-color:rgba(255,255,255,0.12)">
+    <div class="flex flex-col px-5 py-4 gap-4">
+      <a href="index.html" class="nav-link active">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="formations.html" class="nav-link">Formations</a>
+      <a href="galerie.html" class="nav-link">Galerie</a>
+      <a href="temoignages.html" class="nav-link">Témoignages</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html" class="btn btn-primary text-sm justify-center mt-2">Nous rejoindre</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-split">
+  <div class="hero-photo-strip">
+    <img src="images/about/classroom.jpg" alt="Étudiants Home School Academy réunis en session" class="hero-photo-img">
+    <span class="hero-photo-badge">Admissions ouvertes — Kaolack, Sénégal</span>
+  </div>
+  <div class="hero-content-band">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-20">
+      <h1 class="font-display font-bold text-white text-3xl md:text-5xl leading-[1.1] max-w-3xl">
+        Bâtis ton avenir dans le <span style="color:var(--gold)">numérique</span>.
+      </h1>
+      <p class="text-white/80 text-lg mt-6 max-w-lg">
+        HOME SCHOOL forme étudiants, professionnels et entreprises aux métiers de l'informatique — du premier clic au poste en entreprise.
+      </p>
+      <div class="cta-split mt-9">
+        <a href="formations.html" class="cta-split-item cta-split-main">
+          <span>Voir les formations</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="contact.html" class="cta-split-item cta-split-secondary">
+          <span>Nous contacter</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TICKER D'ADMISSIONS ================= -->
+<section class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-set">
+      <span>04 formations diplômantes</span><span class="ticker-dot">✦</span>
+      <span>Présentiel &amp; en ligne</span><span class="ticker-dot">✦</span>
+      <span>Admissions ouvertes</span><span class="ticker-dot">✦</span>
+      <span>Kaolack, Sénégal</span><span class="ticker-dot">✦</span>
+    </span>
+    <span class="ticker-set" aria-hidden="true">
+      <span>04 formations diplômantes</span><span class="ticker-dot">✦</span>
+      <span>Présentiel &amp; en ligne</span><span class="ticker-dot">✦</span>
+      <span>Admissions ouvertes</span><span class="ticker-dot">✦</span>
+      <span>Kaolack, Sénégal</span><span class="ticker-dot">✦</span>
+    </span>
+  </div>
+</section>
+
+<!-- ================= À PROPOS APERÇU ================= -->
+<section class="max-w-7xl mx-auto px-5 md:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
+  <div class="reveal">
+    <div class="section-heading-line mb-4"></div>
+    <span class="eyebrow">À propos</span>
+    <h2 class="font-display font-bold text-2xl md:text-3xl mt-5" style="color:var(--ink)">Un centre pensé par et pour le numérique</h2>
+    <p class="text-lg mt-5" style="color:var(--ink-soft)">
+      Depuis sa création, HOME SCHOOL accompagne élèves, professionnels en reconversion et entreprises dans la maîtrise des compétences numériques essentielles. Nos formateurs, tous issus du terrain, conçoivent des parcours concrets, orientés projets et adaptés aux réalités du marché de l'emploi.
+    </p>
+    <a href="about.html" class="btn btn-dark-outline mt-7">En savoir plus sur nous</a>
+  </div>
+  <div class="reveal reveal-delay-2 grid grid-cols-2 gap-4">
+    <div class="card p-6">
+      <h3 class="font-display font-semibold text-lg">Apprentissage par projet</h3>
+      <p class="text-sm mt-2" style="color:var(--ink-soft)">Des cas réels, du premier jour au dernier.</p>
+    </div>
+    <div class="card p-6 mt-8">
+      <h3 class="font-display font-semibold text-lg">Formateurs experts</h3>
+      <p class="text-sm mt-2" style="color:var(--ink-soft)">Un accompagnement individualisé.</p>
+    </div>
+    <div class="card p-6">
+      <h3 class="font-display font-semibold text-lg">Partenaires entreprises</h3>
+      <p class="text-sm mt-2" style="color:var(--ink-soft)">Stages et emplois facilités.</p>
+    </div>
+    <div class="card p-6 mt-8">
+      <h3 class="font-display font-semibold text-lg">Diplômes reconnus</h3>
+      <p class="text-sm mt-2" style="color:var(--ink-soft)">Une valeur ajoutée sur le CV.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMATIONS APERÇU ================= -->
+<section class="py-24 section-decorated" style="background:var(--gray-light)">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex flex-wrap justify-between items-end gap-6 reveal">
+      <div>
+        <span class="eyebrow">Nos formations</span>
+        <h2 class="font-display font-bold text-2xl md:text-3xl mt-5" style="color:var(--ink)">Des formations qui mènent à l'emploi</h2>
+      </div>
+      <a href="formations.html" class="btn btn-dark-outline">Toutes les formations</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-12">
+      <div class="card-formation reveal">
+        <div class="card-formation-head" style="background-image: linear-gradient(150deg, rgba(4,4,92,.90) 0%, rgba(6,6,145,.82) 55%, rgba(59,62,209,.60) 130%), url('images/formations/bureautique.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+          <h3 class="font-display font-semibold text-xl">Informatique Bureautique</h3>
+        </div>
+        <div class="card-formation-body">
+          <p class="text-sm" style="color:var(--ink-soft)">Bases de l'informatique, Google Docs/Sheets/Slides, Microsoft Office et Internet &amp; Emails.</p>
+          <div class="flex gap-2 mt-4 flex-wrap"><span class="tag">3 mois</span><span class="tag">Présentiel &amp; en ligne</span></div>
+        </div>
+      </div>
+      <div class="card-formation reveal reveal-delay-1">
+        <div class="card-formation-head" style="background-image: linear-gradient(150deg, rgba(4,4,92,.90) 0%, rgba(6,6,145,.82) 55%, rgba(59,62,209,.60) 130%), url('images/formations/illustrator.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+          <h3 class="font-display font-semibold text-xl">Design Graphique</h3>
+        </div>
+        <div class="card-formation-body">
+          <p class="text-sm" style="color:var(--ink-soft)">Logos, affiches et flyers avec Adobe Illustrator et Photoshop, en présentiel.</p>
+          <div class="flex gap-2 mt-4 flex-wrap"><span class="tag">30 jours</span><span class="tag">Présentiel</span></div>
+        </div>
+      </div>
+      <div class="card-formation reveal reveal-delay-2">
+        <div class="card-formation-head" style="background-image: linear-gradient(150deg, rgba(4,4,92,.90) 0%, rgba(6,6,145,.82) 55%, rgba(59,62,209,.60) 130%), url('images/formations/wordpress.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+          <h3 class="font-display font-semibold text-xl">Création de site WordPress</h3>
+        </div>
+        <div class="card-formation-body">
+          <p class="text-sm" style="color:var(--ink-soft)">Crée ton propre site e-commerce professionnel, de l'installation à la mise en ligne.</p>
+          <div class="flex gap-2 mt-4 flex-wrap"><span class="tag">20 jours</span><span class="tag">En ligne</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEMOIGNAGE APERÇU ================= -->
+<section class="max-w-7xl mx-auto px-5 md:px-8 py-24">
+  <div class="grid lg:grid-cols-[1fr_1.3fr] gap-14 items-center">
+    <div class="reveal">
+      <span class="eyebrow">Témoignages</span>
+      <h2 class="font-display font-bold text-2xl md:text-3xl mt-5" style="color:var(--ink)">Ils ont concrétisé leur réussite avec nous</h2>
+      <a href="temoignages.html" class="btn btn-dark-outline mt-7">Lire tous les témoignages</a>
+    </div>
+    <div class="card p-8 reveal reveal-delay-2 relative">
+      <div class="mb-3" style="color:var(--gold); letter-spacing:2px; font-size:.95rem">★★★★★</div>
+      <p class="text-lg" style="color:var(--ink-soft)">Formation exigeante mais incroyablement formatrice. En un mois je suis passée de zéro connaissance en design à mes premières commandes de logos en freelance.</p>
+      <div class="flex items-center gap-3 mt-6 pt-5" style="border-top:1.5px solid rgba(255,255,255,0.25)">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center font-display font-bold avatar-badge" style="background:#fff; color:var(--blue)">AD</div>
+        <div>
+          <div class="font-semibold">Aïssatou Diop</div>
+          <div class="text-sm" style="color:var(--ink-soft)">Diplômée Design Graphique, promotion 2025</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="blue-gradient grid-pattern">
+  <div class="max-w-5xl mx-auto px-5 md:px-8 py-20 text-center reveal">
+    <h2 class="font-display font-bold text-2xl md:text-3xl text-white">Prêt à écrire la prochaine ligne de ton parcours ?</h2>
+    <p class="text-white/80 mt-4 max-w-xl mx-auto">Places limitées par session. Contacte notre équipe pour choisir la formation qui te correspond.</p>
+    <a href="contact.html" class="btn btn-primary mt-8">Demander des informations</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer style="background:var(--ink); border-top:2px solid var(--gold)" class="text-white/70">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 grid md:grid-cols-4 gap-10">
+    <div>
+      <span class="footer-logo-badge mb-1"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-7 w-auto object-contain"></span>
+      <p class="text-sm mt-4 max-w-xs">Centre de formation professionnelle dédié aux métiers du numérique et de l'informatique.</p>
+      <a href="https://www.facebook.com/p/Home-School-Academy-61556890092962/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-white/80 hover:text-white transition">
+        <i data-lucide="facebook" class="w-4 h-4"></i>
+        Suivez-nous sur Facebook
+      </a>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Navigation</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white">À propos</a></li>
+        <li><a href="formations.html" class="hover:text-white">Formations</a></li>
+        <li><a href="galerie.html" class="hover:text-white">Galerie</a></li>
+        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Formations</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="formations.html" class="hover:text-white">Informatique Bureautique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Design Graphique</a></li>
+        <li><a href="formations.html" class="hover:text-white">Création de site WordPress</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-display font-semibold text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm font-mono">
+        <li>Kaolack (Kasnack), Sénégal</li>
+        <li>+221 77 161 70 44</li>
+        <li>homeschoolacademy221@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs font-mono">
+    © 2026 HOME SCHOOL — Tous droits réservés.
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut">
+  <svg viewBox="0 0 52 52"><circle class="ring-bg" cx="26" cy="26" r="22.5"></circle><circle class="ring-progress" id="backToTopRing" cx="26" cy="26" r="22.5"></circle></svg>
+  <i data-lucide="arrow-up" class="w-4 h-4"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
