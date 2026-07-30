@@ -7072,21 +7072,23 @@
     "nom": "CFMPL — Centre de Formation aux Métiers Portuaires et à la Logistique",
     "sigle": "CFMPL",
     "logo": null,
-    "adresse": "Rocade Fann Bel Air, Dakar",
-    "description": "Centre créé avec les acteurs portuaires de Dakar pour former aux métiers du transport, de la logistique et de l'inter-modalité.",
-    "siteOfficiel": null,
+    "adresse": "Rocade Fann-Bel Air, près du CNQP, BP 32395, Dakar-Ponty",
+    "description": "Créé en 2011 à l'initiative de la Communauté des Acteurs Portuaires de Dakar (CAP DAKAR), financé par l'Agence Française de Développement. Premier et unique centre d'Afrique subsaharienne à dispenser des formations basées sur l'Approche Par Compétences dans les métiers portuaires, la logistique et le transport.",
+    "siteOfficiel": "https://www.cfmpl.sn/",
     "telephone": "+221 33 832 89 77",
     "email": "cfmpl@cfmpl.sn",
     "reseaux": {},
     "secteurs": [
-      "Transport",
+      "Métiers portuaires",
       "Logistique",
-      "Métiers portuaires"
+      "Transport",
+      "Manutention"
     ],
     "filieres": [
-      "Transport",
+      "Métiers portuaires",
       "Logistique",
-      "Métiers portuaires"
+      "Transport",
+      "Manutention"
     ],
     "diplomes": [
       "BTS"
