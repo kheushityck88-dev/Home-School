@@ -1,253 +1,308 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOME SCHOOL — Centre de formation aux métiers du numérique</title>
-<meta name="description" content="HOME SCHOOL forme les talents de demain aux métiers du numérique : développement web, data, cybersécurité, design et marketing digital.">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Parcourio | Trouve ta route vers la bonne formation</title>
+<meta name="description" content="Parcourio aide les jeunes du Sénégal à choisir une formation adaptée à leur profil, leur niveau et leur ville." />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Parcourio" />
+<meta property="og:title" content="Parcourio | Trouve ta route vers la bonne formation" />
+<meta property="og:description" content="Parcourio aide les jeunes du Sénégal à choisir une formation adaptée à leur profil, leur niveau et leur ville." />
+<meta property="og:image" content="https://www.parcourio.com/assets/img/logo-full.png" />
+<meta property="og:url" content="https://www.parcourio.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Parcourio | Trouve ta route vers la bonne formation" />
+<meta name="twitter:description" content="Parcourio aide les jeunes du Sénégal à choisir une formation adaptée à leur profil, leur niveau et leur ville." />
+<meta name="twitter:image" content="https://www.parcourio.com/assets/img/logo-full.png" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZZS6RJXGF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZZZS6RJXGF');
+</script>
+
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96.png" />
+<link rel="icon" type="image/png" sizes="144x144" href="assets/img/favicon-144.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+<link rel="stylesheet" href="style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
-<header class="site-nav">
-  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
-    <a href="index.html" class="flex items-center gap-2">
-      <span class="nav-logo-badge"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-8 md:h-9 w-auto object-contain"></span>
-      <span class="hidden md:inline-block w-px h-7 mx-2" style="background:rgba(255,255,255,0.18)"></span>
-      <span class="hidden md:block text-[11px] font-semibold tracking-wide" style="color:rgba(255,255,255,0.65)">CENTRE DE<br>FORMATION NUMÉRIQUE</span>
-    </a>
-    <nav class="hidden lg:flex items-center gap-8">
-      <a href="index.html" class="nav-link active">Accueil</a>
-      <a href="about.html" class="nav-link">À propos</a>
-      <a href="formations.html" class="nav-link">Formations</a>
-      <a href="galerie.html" class="nav-link">Galerie</a>
-      <a href="temoignages.html" class="nav-link">Témoignages</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-    <a href="contact.html" class="hidden lg:inline-flex btn btn-primary text-sm">Nous rejoindre</a>
-    <button id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" class="lg:hidden p-2">
-      <i data-lucide="menu" class="icon-open w-7 h-7" style="color:#fff"></i>
-      <i data-lucide="x" class="icon-close hidden w-7 h-7" style="color:#fff"></i>
-    </button>
+<header class="header">
+  <div class="logo-lockup">
+    <span class="logo-badge"><img src="assets/img/logo-icon.png" alt="Parcourio" class="logo-mark" /></span>
+    <span class="logo-text">
+      <span class="logo-name">PARCOURIO<span class="beta-badge">Bêta</span></span>
+      <span class="logo-slogan">Trouvez la bonne école, construisez votre avenir</span>
+    </span>
   </div>
-  <div id="mobile-menu" class="lg:hidden border-t" style="border-color:rgba(255,255,255,0.12)">
-    <div class="flex flex-col px-5 py-4 gap-4">
-      <a href="index.html" class="nav-link active">Accueil</a>
-      <a href="about.html" class="nav-link">À propos</a>
-      <a href="formations.html" class="nav-link">Formations</a>
-      <a href="galerie.html" class="nav-link">Galerie</a>
-      <a href="temoignages.html" class="nav-link">Témoignages</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="contact.html" class="btn btn-primary text-sm justify-center mt-2">Nous rejoindre</a>
-    </div>
-  </div>
+  <nav id="mainNav">
+    <a href="#concept"><span class="nav-index">01</span>Concept</a>
+    <a href="#test"><span class="nav-index">02</span>Orientation</a>
+    <a href="#ecoles"><span class="nav-index">03</span>Écoles</a>
+    <a href="#contact"><span class="nav-index">04</span>Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero-split">
-  <div class="hero-photo-strip">
-    <img src="images/about/classroom.jpg" alt="Étudiants Home School Academy réunis en session" class="hero-photo-img">
-    <span class="hero-photo-badge">Admissions ouvertes — Kaolack, Sénégal</span>
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Orientation & formation · Sénégal</p>
+    <h1>Trouve ta <span>route</span> vers la formation qui te ressemble.</h1>
+    <p class="hero-lede">Parcourio lit ton profil, ton niveau et ta ville comme des coordonnées, et trace un parcours clair jusqu'à l'école qui te correspond.</p>
+    <div class="hero-actions">
+      <a href="#test" class="btn-primary" data-preselect-parcours="apres_diplome">Après un diplôme</a>
+      <a href="#test" class="btn-secondary" data-preselect-parcours="apprendre_metier">Apprendre un métier</a>
+    </div>
+    <p class="hero-free-note"><span class="hero-free-dot"></span>100% gratuit — aucune inscription requise</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><b id="heroStatEcoles">252</b><span>Écoles référencées</span></div>
+      <div class="hero-stat"><b id="heroStatRegions">14</b><span>Régions couvertes</span></div>
+      <div class="hero-stat"><b>2</b><span>Parcours d'orientation</span></div>
+    </div>
   </div>
-  <div class="hero-content-band">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-20">
-      <h1 class="font-display font-bold text-white text-3xl md:text-5xl leading-[1.1] max-w-3xl">
-        Bâtis ton avenir dans le <span style="color:var(--gold)">numérique</span>.
-      </h1>
-      <p class="text-white/80 text-lg mt-6 max-w-lg">
-        HOME SCHOOL forme étudiants, professionnels et entreprises aux métiers de l'informatique — du premier clic au poste en entreprise.
-      </p>
-      <div class="cta-split mt-9">
-        <a href="formations.html" class="cta-split-item cta-split-main">
-          <span>Voir les formations</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-        <a href="contact.html" class="cta-split-item cta-split-secondary">
-          <span>Nous contacter</span>
-        </a>
-      </div>
+  <div class="hero-visual">
+    <div class="hero-photo-frame">
+      <img src="assets/img/hero-photo.jpg" alt="" />
+      <span class="hero-pin p1"><span></span>Dakar</span>
+      <span class="hero-pin p2"><span></span>Thiès</span>
+      <span class="hero-pin p3"><span></span>Saint-Louis</span>
+      <span class="hero-pin p4"><span></span>Kaolack</span>
+      <span class="hero-pin p5"><span></span>Ziguinchor</span>
+      <span class="hero-pin p6"><span></span>Mbour</span>
+      <span class="hero-pin p7 more"><span></span>+ d'autres villes</span>
+    </div>
+    <div class="hero-compass" aria-hidden="true">
+      <img src="assets/img/logo-icon.png" alt="" />
     </div>
   </div>
 </section>
 
-<!-- ================= TICKER D'ADMISSIONS ================= -->
-<section class="ticker">
-  <div class="ticker-track">
-    <span class="ticker-set">
-      <span>04 formations diplômantes</span><span class="ticker-dot">✦</span>
-      <span>Présentiel &amp; en ligne</span><span class="ticker-dot">✦</span>
-      <span>Admissions ouvertes</span><span class="ticker-dot">✦</span>
-      <span>Kaolack, Sénégal</span><span class="ticker-dot">✦</span>
-    </span>
-    <span class="ticker-set" aria-hidden="true">
-      <span>04 formations diplômantes</span><span class="ticker-dot">✦</span>
-      <span>Présentiel &amp; en ligne</span><span class="ticker-dot">✦</span>
-      <span>Admissions ouvertes</span><span class="ticker-dot">✦</span>
-      <span>Kaolack, Sénégal</span><span class="ticker-dot">✦</span>
-    </span>
+<section id="concept" class="section waypoint">
+  <div class="waypoint-marker">
+    <span class="waypoint-num">01</span>
+    <span class="waypoint-line"></span>
   </div>
-</section>
-
-<!-- ================= À PROPOS APERÇU ================= -->
-<section class="max-w-7xl mx-auto px-5 md:px-8 py-24 grid lg:grid-cols-2 gap-14 items-center">
-  <div class="reveal">
-    <div class="section-heading-line mb-4"></div>
-    <span class="eyebrow">À propos</span>
-    <h2 class="font-display font-bold text-2xl md:text-3xl mt-5" style="color:var(--ink)">Un centre pensé par et pour le numérique</h2>
-    <p class="text-lg mt-5" style="color:var(--ink-soft)">
-      Depuis sa création, HOME SCHOOL accompagne élèves, salariés en reconversion et entreprises vers la maîtrise du numérique. Nos formateurs, tous issus du terrain, conçoivent des parcours concrets et orientés projets, taillés pour les réalités du marché de l'emploi.
+  <div class="waypoint-body">
+    <p class="eyebrow">Point de départ</p>
+    <h2>Pourquoi Parcourio ?</h2>
+    <p class="section-intro">
+      Beaucoup de personnes choisissent une formation sans vraie orientation.
+      Parcourio pose les bonnes questions avant de tracer le chemin, pour un choix réfléchi et adapté à qui tu es.
     </p>
-    <a href="about.html" class="btn btn-dark-outline mt-7">En savoir plus sur nous</a>
-  </div>
-  <div class="reveal reveal-delay-2 grid grid-cols-2 gap-4">
-    <div class="card p-6">
-      <h3 class="font-display font-semibold text-lg">Apprentissage par projet</h3>
-      <p class="text-sm mt-2" style="color:var(--ink-soft)">Des cas réels, du premier jour au dernier.</p>
-    </div>
-    <div class="card p-6 mt-8">
-      <h3 class="font-display font-semibold text-lg">Formateurs experts</h3>
-      <p class="text-sm mt-2" style="color:var(--ink-soft)">Un accompagnement individualisé.</p>
-    </div>
-    <div class="card p-6">
-      <h3 class="font-display font-semibold text-lg">Partenaires entreprises</h3>
-      <p class="text-sm mt-2" style="color:var(--ink-soft)">Stages et emplois facilités.</p>
-    </div>
-    <div class="card p-6 mt-8">
-      <h3 class="font-display font-semibold text-lg">Diplômes reconnus</h3>
-      <p class="text-sm mt-2" style="color:var(--ink-soft)">Une valeur ajoutée sur le CV.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FORMATIONS APERÇU ================= -->
-<section class="py-24 section-decorated" style="background:var(--gray-light)">
-  <div class="max-w-7xl mx-auto px-5 md:px-8">
-    <div class="flex flex-wrap justify-between items-end gap-6 reveal">
-      <div>
-        <span class="eyebrow">Nos formations</span>
-        <h2 class="font-display font-bold text-2xl md:text-3xl mt-5" style="color:var(--ink)">Des formations qui mènent à l'emploi</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="card-pin"><svg class="icon icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg></span>
+        <h3>Analyse ton profil</h3>
+        <hr class="card-stub-line" aria-hidden="true" />
+        <p>Nous prenons en compte ton niveau, tes intérêts et tes objectifs réels.</p>
       </div>
-      <a href="formations.html" class="btn btn-dark-outline">Toutes les formations</a>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-      <div class="card-formation reveal">
-        <div class="card-formation-head" style="background-image: linear-gradient(150deg, rgba(4,4,92,.90) 0%, rgba(6,6,145,.82) 55%, rgba(59,62,209,.60) 130%), url('images/formations/bureautique.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-          <h3 class="font-display font-semibold text-xl">Informatique Bureautique</h3>
-        </div>
-        <div class="card-formation-body">
-          <p class="text-sm" style="color:var(--ink-soft)">Bases de l'informatique, Google Docs/Sheets/Slides, Microsoft Office et Internet &amp; Emails.</p>
-          <div class="flex gap-2 mt-4 flex-wrap"><span class="tag">3 mois</span><span class="tag">Présentiel &amp; en ligne</span></div>
-        </div>
+      <div class="card">
+        <span class="card-pin"><svg class="icon icon-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" /><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /></svg></span>
+        <h3>Parcours personnalisé</h3>
+        <hr class="card-stub-line" aria-hidden="true" />
+        <p>Un chemin clair et logique pour atteindre ton projet professionnel.</p>
       </div>
-      <div class="card-formation reveal reveal-delay-1">
-        <div class="card-formation-head" style="background-image: linear-gradient(150deg, rgba(4,4,92,.90) 0%, rgba(6,6,145,.82) 55%, rgba(59,62,209,.60) 130%), url('images/formations/illustrator.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-          <h3 class="font-display font-semibold text-xl">Design Graphique</h3>
-        </div>
-        <div class="card-formation-body">
-          <p class="text-sm" style="color:var(--ink-soft)">Logos, affiches et flyers avec Adobe Illustrator et Photoshop, en présentiel.</p>
-          <div class="flex gap-2 mt-4 flex-wrap"><span class="tag">30 jours</span><span class="tag">Présentiel</span></div>
-        </div>
-      </div>
-      <div class="card-formation reveal reveal-delay-2">
-        <div class="card-formation-head" style="background-image: linear-gradient(150deg, rgba(4,4,92,.90) 0%, rgba(6,6,145,.82) 55%, rgba(59,62,209,.60) 130%), url('images/formations/wordpress.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-          <h3 class="font-display font-semibold text-xl">Création de site WordPress</h3>
-        </div>
-        <div class="card-formation-body">
-          <p class="text-sm" style="color:var(--ink-soft)">Crée ton propre site e-commerce professionnel, de l'installation à la mise en ligne.</p>
-          <div class="flex gap-2 mt-4 flex-wrap"><span class="tag">20 jours</span><span class="tag">En ligne</span></div>
-        </div>
+      <div class="card">
+        <span class="card-pin"><svg class="icon icon-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></span>
+        <h3>Écoles au Sénégal</h3>
+        <hr class="card-stub-line" aria-hidden="true" />
+        <p>Découvre les écoles et centres de formation, ville par ville.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= TEMOIGNAGE APERÇU ================= -->
-<section class="max-w-7xl mx-auto px-5 md:px-8 py-24">
-  <div class="grid lg:grid-cols-[1fr_1.3fr] gap-14 items-center">
-    <div class="reveal">
-      <span class="eyebrow">Témoignages</span>
-      <h2 class="font-display font-bold text-2xl md:text-3xl mt-5" style="color:var(--ink)">Ils ont concrétisé leur réussite avec nous</h2>
-      <a href="temoignages.html" class="btn btn-dark-outline mt-7">Lire tous les témoignages</a>
+<section id="test" class="section alt waypoint">
+  <div class="waypoint-marker">
+    <span class="waypoint-num">02</span>
+    <span class="waypoint-line"></span>
+  </div>
+  <div class="waypoint-body">
+    <p class="eyebrow">Point de départ</p>
+    <h2>Ton orientation, en deux parcours</h2>
+    <p class="section-intro">
+      Choisis ta situation : chaque parcours pose des questions différentes, dans un ordre différent, pour une recommandation vraiment adaptée à toi.
+    </p>
+
+    <div class="parcours-picker" id="parcoursPicker">
+      <!-- Généré dynamiquement par script.js à partir de OrientationData.PARCOURS -->
     </div>
-    <div class="card p-8 reveal reveal-delay-2 relative">
-      <div class="mb-3" style="color:var(--gold); letter-spacing:2px; font-size:.95rem">★★★★★</div>
-      <p class="text-lg" style="color:var(--ink-soft)">Formation exigeante mais incroyablement formatrice. En un mois je suis passée de zéro connaissance en design à mes premières commandes de logos en freelance.</p>
-      <div class="flex items-center gap-3 mt-6 pt-5" style="border-top:1.5px solid rgba(255,255,255,0.25)">
-        <div class="w-11 h-11 rounded-full flex items-center justify-center font-display font-bold avatar-badge" style="background:#fff; color:var(--blue)">AD</div>
-        <div>
-          <div class="font-semibold">Aïssatou Diop</div>
-          <div class="text-sm" style="color:var(--ink-soft)">Diplômée Design Graphique, promotion 2025</div>
-      </div>
+
+    <div class="parcours-etape" id="etapeDiplome" hidden>
+      <button type="button" class="parcours-retour" id="retourParcours1"><svg class="icon icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg> Changer de parcours</button>
+      <h3>Quel diplôme as-tu déjà ?</h3>
+      <div class="diplome-chips" id="diplomeChips"></div>
+      <div class="parcours-sous-bloc" id="objectifDiplomeWrap" hidden>
+        <h3>Quel est ton objectif ?</h3>
+        <div class="objectif-chips" id="objectifChips"></div>
       </div>
     </div>
+
+    <div class="parcours-etape" id="etapeMetierIntro" hidden>
+      <button type="button" class="parcours-retour" id="retourParcours2"><svg class="icon icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg> Changer de parcours</button>
+      <p class="note">9 questions courtes sur tes compétences, tes centres d'intérêt et tes objectifs, pour te proposer des formations qualifiantes et des métiers accessibles rapidement.</p>
+    </div>
+
+    <form class="test-form" id="formDynamique" data-form-id="dyn" hidden>
+      <!-- Généré dynamiquement par script.js via OrientationEngine.rendreFormulaire,
+           à partir de OrientationData.construireQuestionnaireApresDiplome(diplome, objectif)
+           ou OrientationData.construireQuestionnaireMetier(). -->
+    </form>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="blue-gradient grid-pattern">
-  <div class="max-w-5xl mx-auto px-5 md:px-8 py-20 text-center reveal">
-    <h2 class="font-display font-bold text-2xl md:text-3xl text-white">Prêt à écrire la prochaine ligne de ton parcours ?</h2>
-    <p class="text-white/80 mt-4 max-w-xl mx-auto">Places limitées par session. Contacte notre équipe pour choisir la formation qui te correspond.</p>
-    <a href="contact.html" class="btn btn-primary mt-8">Demander des informations</a>
+<section id="ecoles" class="section alt waypoint">
+  <div class="waypoint-marker">
+    <span class="waypoint-num">03</span>
+    <span class="waypoint-line"></span>
+  </div>
+  <div class="waypoint-body">
+    <p class="eyebrow">Étapes sur la carte</p>
+    <h2>Écoles & centres de formation</h2>
+    <p class="section-intro" id="ecolesSectionIntro">
+<span id="ecolesSectionIntroCount">252</span> écoles et centres de formation référencés au Sénégal, publics et privés, dans les <span id="ecolesSectionIntroRegions">14</span> régions du pays. Cherche par nom, sigle ou filière, filtre par région, ville, domaine ou statut, mets tes établissements préférés en favoris <svg class="icon icon-star icon-inline" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>, puis ouvre une fiche pour voir tous les détails.
+    </p>
+
+    <div class="directory-controls">
+      <input type="search" id="ecoleSearch" class="directory-search" placeholder="Rechercher une école, un sigle, une filière…" aria-label="Rechercher une école par nom" />
+      <button type="button" class="favoris-toggle" id="favorisToggle" aria-pressed="false">
+        <span class="favoris-toggle-icon"><svg class="icon icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg></span> Mes favoris <span class="favoris-toggle-count" id="favorisCount" hidden>0</span>
+      </button>
+      <label class="directory-select-wrap" for="ecoleRegionFilter">
+        <span class="visually-hidden">Filtrer par région</span>
+        <select id="ecoleRegionFilter" aria-label="Filtrer par région">
+          <option value="">Toutes les régions</option>
+        </select>
+      </label>
+      <label class="directory-select-wrap" for="ecoleVilleFilter">
+        <span class="visually-hidden">Filtrer par ville</span>
+        <select id="ecoleVilleFilter" aria-label="Filtrer par ville">
+          <option value="">Toutes les villes</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="directory-recherches" id="derniereRecherches" hidden>
+      <span class="directory-recherches-label">Recherches récentes :</span>
+      <span class="directory-recherches-chips" id="derniereRecherchesChips"></span>
+      <button type="button" class="directory-recherches-clear" id="derniereRecherchesClear">Effacer</button>
+    </div>
+
+    <div class="directory-domaines" role="group" aria-label="Filtrer par domaine">
+      <button type="button" class="domaine-chip is-active" data-domaine="">Tous</button>
+      <button type="button" class="domaine-chip" data-domaine="technologie"><svg class="icon icon-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" /><path d="M20.054 15.987H3.946" /></svg> Technologie</button>
+      <button type="button" class="domaine-chip" data-domaine="creatif"><svg class="icon icon-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" /><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /><circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /><circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /><circle cx="8.5" cy="7.5" r=".5" fill="currentColor" /></svg> Créatif</button>
+      <button type="button" class="domaine-chip" data-domaine="social"><svg class="icon icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /><path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" /></svg> Social</button>
+      <button type="button" class="domaine-chip" data-domaine="gestion"><svg class="icon icon-bar-chart-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></svg> Gestion</button>
+    </div>
+
+    <div class="directory-domaines directory-types" role="group" aria-label="Filtrer par statut public ou privé">
+      <button type="button" class="type-chip is-active" data-type="">Public & privé</button>
+      <button type="button" class="type-chip" data-type="public"><svg class="icon icon-landmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg> Publique</button>
+      <button type="button" class="type-chip" data-type="privé"><svg class="icon icon-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M18 4.933V21" /><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" /><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" /><path d="M6 4.933V21" /><circle cx="12" cy="9" r="2" /></svg> Privée</button>
+    </div>
+
+    <div class="directory-domaines directory-implantations" role="group" aria-label="Filtrer par type d'implantation" id="implantationFilterGroup" hidden>
+      <button type="button" class="implantation-chip is-active" data-implantation="">Sièges & campus</button>
+      <button type="button" class="implantation-chip" data-implantation="siege">Sièges uniquement</button>
+      <button type="button" class="implantation-chip" data-implantation="campus">Campus uniquement</button>
+    </div>
+
+    <div class="directory-domaines directory-niveaux" role="group" aria-label="Filtrer par niveau d'accès">
+      <button type="button" class="niveau-chip is-active" data-niveau="">Tous niveaux</button>
+      <button type="button" class="niveau-chip" data-niveau="BFEM">BFEM</button>
+      <button type="button" class="niveau-chip" data-niveau="Après BAC">Après BAC</button>
+      <button type="button" class="niveau-chip" data-niveau="BTS">BTS</button>
+      <button type="button" class="niveau-chip" data-niveau="Licence">Licence</button>
+      <button type="button" class="niveau-chip" data-niveau="Master">Master</button>
+    </div>
+
+    <p class="directory-count" id="ecoleCount" aria-live="polite">Chargement des écoles…</p>
+    <button type="button" id="ecolesToggleBtn" class="btn-secondary directory-masquer">Voir les écoles de la base</button>
+    <div class="cards ecole-directory" id="ecoleDirectoryGrid"></div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer style="background:var(--ink); border-top:2px solid var(--gold)" class="text-white/70">
-  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 grid md:grid-cols-4 gap-10">
-    <div>
-      <span class="footer-logo-badge mb-1"><img src="images/brand/logo-crop.png" alt="Home School Academy" class="h-7 w-auto object-contain"></span>
-      <p class="text-sm mt-4 max-w-xs">Centre de formation professionnelle dédié aux métiers du numérique et de l'informatique.</p>
-      <a href="https://www.facebook.com/p/Home-School-Academy-61556890092962/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-white/80 hover:text-white transition">
-        <i data-lucide="facebook" class="w-4 h-4"></i>
-        Suivez-nous sur Facebook
-      </a>
-    </div>
-    <div>
-      <h4 class="font-display font-semibold text-white mb-4">Navigation</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="about.html" class="hover:text-white">À propos</a></li>
-        <li><a href="formations.html" class="hover:text-white">Formations</a></li>
-        <li><a href="galerie.html" class="hover:text-white">Galerie</a></li>
-        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-display font-semibold text-white mb-4">Formations</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="formations.html" class="hover:text-white">Informatique Bureautique</a></li>
-        <li><a href="formations.html" class="hover:text-white">Design Graphique</a></li>
-        <li><a href="formations.html" class="hover:text-white">Création de site WordPress</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-display font-semibold text-white mb-4">Contact</h4>
-      <ul class="space-y-2 text-sm font-mono">
-        <li>Kaolack (Kasnack), Sénégal</li>
-        <li>+221 77 161 70 44</li>
-        <li>homeschoolacademy221@gmail.com</li>
-      </ul>
-    </div>
+<div class="comparateur-bar" id="comparateurBar" hidden>
+  <span class="comparateur-bar-label"><span id="comparateurCount">0</span> école(s) sélectionnée(s) pour comparer</span>
+  <div class="comparateur-bar-actions">
+    <button type="button" class="comparateur-bar-voir" id="comparateurVoirBtn" disabled>Comparer</button>
+    <button type="button" class="comparateur-bar-vider" id="comparateurViderBtn">Vider</button>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-xs font-mono">
-    © 2026 HOME SCHOOL — Tous droits réservés.
+</div>
+
+<div class="comparateur-modal" id="comparateurModal" aria-hidden="true">
+  <div class="comparateur-modal-backdrop"></div>
+  <div class="comparateur-modal-panel" role="dialog" aria-modal="true" aria-label="Comparateur d'écoles">
+    <button type="button" class="ecole-modal-close" id="comparateurModalClose" aria-label="Fermer le comparateur"><svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+    <div id="comparateurModalContent"></div>
   </div>
+</div>
+
+<div class="ecole-modal" id="ecoleModal" aria-hidden="true">
+  <div class="ecole-modal-backdrop"></div>
+  <div class="ecole-modal-panel" role="dialog" aria-modal="true" aria-label="Fiche détaillée de l'école">
+    <button type="button" class="ecole-modal-close" id="ecoleModalClose" aria-label="Fermer la fiche"><svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+    <div id="ecoleModalContent"></div>
+  </div>
+</div>
+
+<section id="contact" class="section waypoint destination">
+  <div class="waypoint-marker">
+    <span class="waypoint-num"><svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg></span>
+    <span class="waypoint-line short"></span>
+  </div>
+  <div class="waypoint-body">
+    <p class="eyebrow">Destination</p>
+    <h2>Contact</h2>
+    <p class="section-intro">
+      Une question, une suggestion ou un partenariat ? Écris-nous.
+    </p>
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mykqqenw" method="POST">
+      <label>Nom
+        <input type="text" name="nom" placeholder="Ton nom" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" placeholder="ton@email.com" required />
+      </label>
+      <label>Message
+        <textarea name="message" placeholder="Ton message" required></textarea>
+      </label>
+      <input type="hidden" name="_subject" value="Nouveau message — Parcourio" />
+      <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button type="submit">Envoyer</button>
+      <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="logo-badge footer-badge"><img src="assets/img/logo-icon.png" alt="Parcourio" class="footer-mark" /></span>
+  <p>© 2026 Parcourio — Plateforme d'orientation et de formation au Sénégal</p>
+  <p class="footer-links"><a href="mentions-legales.html">Mentions légales & confidentialité</a></p>
 </footer>
 
-<button id="backToTop" aria-label="Retour en haut">
-  <svg viewBox="0 0 52 52"><circle class="ring-bg" cx="26" cy="26" r="22.5"></circle><circle class="ring-progress" id="backToTopRing" cx="26" cy="26" r="22.5"></circle></svg>
-  <i data-lucide="arrow-up" class="w-4 h-4"></i>
-</button>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="js/script.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/data/orientation-data.js"></script>
+<script src="assets/data/ecoles-data.js"></script>
+<script src="assets/js/orientation-engine.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
