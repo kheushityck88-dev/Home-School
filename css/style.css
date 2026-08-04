@@ -34,11 +34,15 @@
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
+html{
+  overflow-x:hidden;
+}
 body{
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 h1,h2,h3,h4{
   font-family: var(--font-display);
@@ -146,6 +150,11 @@ h1,h2,h3,h4{
 .cta-split-secondary:hover{
   background:#fff;
   color: var(--blue);
+}
+@media (max-width: 480px){
+  .cta-split{ flex-direction:column; width:100%; }
+  .cta-split-item{ justify-content:center; padding: 1rem 1.4rem; white-space:normal; text-align:center; }
+  .cta-split-secondary{ border-left:none; border-top:1px solid rgba(255,255,255,0.2); }
 }
 
 /* ---------- Ticker défilant (remplace la grille de chiffres) ---------- */
