@@ -264,16 +264,24 @@ window.ECOLES_DATA = [
     "domaine": "technologie",
     "type": "privé",
     "nom": "École Centrale des Logiciels Libres et des Télécommunications",
-    "sigle": null,
+    "sigle": "EC2LT",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Liberté 2, près du Rond-Point Jet d'Eau, derrière l'immeuble CBAO, Dakar",
+    "description": "École privée d'enseignement supérieur fondée pour former aux logiciels libres et aux télécommunications, avec un centre d'incubation favorisant l'alternance entreprise. Partenariats avec Cisco (CCNA).",
     "siteOfficiel": "https://www.ec2lt.sn/",
-    "telephone": null,
-    "email": null,
+    "telephone": "+221 33 868 18 85",
+    "email": "contacts.ec2lt@gmail.com",
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
+    "secteurs": [
+      "Logiciels libres",
+      "Télécommunications",
+      "Réseaux"
+    ],
+    "filieres": [
+      "Logiciels libres",
+      "Télécommunications",
+      "Réseaux"
+    ],
     "diplomes": [],
     "niveauAccepte": [
       "Après BAC"
@@ -2716,17 +2724,27 @@ window.ECOLES_DATA = [
     "domaine": "technologie",
     "type": "public",
     "nom": "ISEP Bignona",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Bignona",
+    "description": "Établissement public d'enseignement supérieur professionnel, formant des techniciens supérieurs (DiSEP, Bac+2) en alternance école-entreprise selon l'Approche Par Compétences, en lien avec les besoins socio-économiques de la région. ISEP Bignona, formations en lien avec les potentialités de la région de Ziguinchor (agroforesterie, énergies renouvelables, gestion des écosystèmes).",
     "siteOfficiel": "https://isepbignona.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Agroforesterie",
+      "Énergies renouvelables",
+      "Gestion des écosystèmes naturels"
+    ],
+    "filieres": [
+      "Agroforesterie",
+      "Énergies renouvelables",
+      "Gestion des écosystèmes naturels"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -2739,17 +2757,23 @@ window.ECOLES_DATA = [
     "domaine": "gestion",
     "type": "public",
     "nom": "ISEP Bignona — filières entrepreneuriales",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Bignona",
+    "description": "Établissement public d'enseignement supérieur professionnel, formant des techniciens supérieurs (DiSEP, Bac+2) en alternance école-entreprise selon l'Approche Par Compétences, en lien avec les besoins socio-économiques de la région. ISEP Bignona, pôle filières entrepreneuriales.",
     "siteOfficiel": "https://isepbignona.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Entrepreneuriat"
+    ],
+    "filieres": [
+      "Entrepreneuriat"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -2762,17 +2786,29 @@ window.ECOLES_DATA = [
     "domaine": "social",
     "type": "public",
     "nom": "ISEP Bignona — filières agro-environnementales",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Bignona",
+    "description": "Établissement public d'enseignement supérieur professionnel, formant des techniciens supérieurs (DiSEP, Bac+2) en alternance école-entreprise selon l'Approche Par Compétences, en lien avec les besoins socio-économiques de la région. ISEP Bignona, pôle agro-environnemental (transformation agroalimentaire, métiers verts, métiers de l'eau, agriculture et élevage).",
     "siteOfficiel": "https://isepbignona.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Transformation agroalimentaire",
+      "Métiers verts",
+      "Métiers de l'eau",
+      "Agriculture et élevage"
+    ],
+    "filieres": [
+      "Transformation agroalimentaire",
+      "Métiers verts",
+      "Métiers de l'eau",
+      "Agriculture et élevage"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -2785,17 +2821,23 @@ window.ECOLES_DATA = [
     "domaine": "technologie",
     "type": "public",
     "nom": "ISEP Matam",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Matam",
+    "description": "Établissement public d'enseignement supérieur professionnel, formant des techniciens supérieurs (DiSEP, Bac+2) en alternance école-entreprise selon l'Approche Par Compétences, en lien avec les besoins socio-économiques de la région. ISEP Matam, créé par décret présidentiel n° 2016-811 du 14 juin 2016.",
     "siteOfficiel": "https://isepmatam.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Formation professionnelle technique"
+    ],
+    "filieres": [
+      "Formation professionnelle technique"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -2808,17 +2850,23 @@ window.ECOLES_DATA = [
     "domaine": "gestion",
     "type": "public",
     "nom": "ISEP Matam — développement territorial",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Matam",
+    "description": "Établissement public d'enseignement supérieur professionnel, formant des techniciens supérieurs (DiSEP, Bac+2) en alternance école-entreprise selon l'Approche Par Compétences, en lien avec les besoins socio-économiques de la région. ISEP Matam, pôle développement territorial.",
     "siteOfficiel": "https://isepmatam.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Développement territorial"
+    ],
+    "filieres": [
+      "Développement territorial"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -2831,17 +2879,25 @@ window.ECOLES_DATA = [
     "domaine": "social",
     "type": "public",
     "nom": "ISEP Matam — filières santé et environnement",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Matam",
+    "description": "Établissement public d'enseignement supérieur professionnel, formant des techniciens supérieurs (DiSEP, Bac+2) en alternance école-entreprise selon l'Approche Par Compétences, en lien avec les besoins socio-économiques de la région. ISEP Matam, pôle santé et environnement.",
     "siteOfficiel": "https://isepmatam.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Santé",
+      "Environnement"
+    ],
+    "filieres": [
+      "Santé",
+      "Environnement"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -2854,10 +2910,10 @@ window.ECOLES_DATA = [
     "domaine": "social",
     "type": "public",
     "nom": "Université du Sénégal Oriental (USO) — ouverture prévue en 2026",
-    "sigle": null,
+    "sigle": "USO",
     "logo": null,
-    "adresse": null,
-    "description": null,
+    "adresse": "Tambacounda",
+    "description": "Future université publique de Tambacounda, première université de la région, actuellement en chantier (visité par le président de la République en février 2026). Ouverture prévue en octobre 2026.",
     "siteOfficiel": null,
     "telephone": null,
     "email": null,
@@ -3048,17 +3104,24 @@ window.ECOLES_DATA = [
     "domaine": "gestion",
     "type": "public",
     "nom": "ISEP Kolda — en cours de déploiement (projet ESPOIR-Jeunes)",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
-    "siteOfficiel": null,
+    "adresse": "Kolda",
+    "description": "Institut Supérieur d'Enseignement Professionnel en cours de déploiement dans le cadre du projet ESPOIR-Jeunes (Enseignement Supérieur Professionnel Orienté Insertion et Réussite des Jeunes), financé par la Banque Mondiale et l'AFD à hauteur de 205 millions de dollars. Le projet prévoit 8 nouveaux ISEP et la formation de 17 000 apprenants par an à travers le pays, avec un accent sur l'inclusion des femmes.",
+    "siteOfficiel": "https://espoirjeunes.3fpt.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Formation professionnelle technique"
+    ],
+    "filieres": [
+      "Formation professionnelle technique"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)",
+      "Certificat de compétence professionnelle"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -3094,17 +3157,24 @@ window.ECOLES_DATA = [
     "domaine": "gestion",
     "type": "public",
     "nom": "ISEP Louga — en cours de déploiement (projet ESPOIR-Jeunes)",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
-    "siteOfficiel": null,
+    "adresse": "Louga",
+    "description": "Institut Supérieur d'Enseignement Professionnel en cours de déploiement dans le cadre du projet ESPOIR-Jeunes (Enseignement Supérieur Professionnel Orienté Insertion et Réussite des Jeunes), financé par la Banque Mondiale et l'AFD à hauteur de 205 millions de dollars. Le projet prévoit 8 nouveaux ISEP et la formation de 17 000 apprenants par an à travers le pays, avec un accent sur l'inclusion des femmes.",
+    "siteOfficiel": "https://espoirjeunes.3fpt.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Formation professionnelle technique"
+    ],
+    "filieres": [
+      "Formation professionnelle technique"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)",
+      "Certificat de compétence professionnelle"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -3140,17 +3210,24 @@ window.ECOLES_DATA = [
     "domaine": "gestion",
     "type": "public",
     "nom": "ISEP Kédougou — en cours de déploiement (projet ESPOIR-Jeunes)",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
-    "siteOfficiel": null,
+    "adresse": "Kédougou",
+    "description": "Institut Supérieur d'Enseignement Professionnel en cours de déploiement dans le cadre du projet ESPOIR-Jeunes (Enseignement Supérieur Professionnel Orienté Insertion et Réussite des Jeunes), financé par la Banque Mondiale et l'AFD à hauteur de 205 millions de dollars. Le projet prévoit 8 nouveaux ISEP et la formation de 17 000 apprenants par an à travers le pays, avec un accent sur l'inclusion des femmes.",
+    "siteOfficiel": "https://espoirjeunes.3fpt.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Formation professionnelle technique"
+    ],
+    "filieres": [
+      "Formation professionnelle technique"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)",
+      "Certificat de compétence professionnelle"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -3186,17 +3263,24 @@ window.ECOLES_DATA = [
     "domaine": "social",
     "type": "public",
     "nom": "ISEP Sédhiou — en cours de déploiement (projet ESPOIR-Jeunes)",
-    "sigle": null,
+    "sigle": "ISEP",
     "logo": null,
-    "adresse": null,
-    "description": null,
-    "siteOfficiel": null,
+    "adresse": "Sédhiou",
+    "description": "Institut Supérieur d'Enseignement Professionnel en cours de déploiement dans le cadre du projet ESPOIR-Jeunes (Enseignement Supérieur Professionnel Orienté Insertion et Réussite des Jeunes), financé par la Banque Mondiale et l'AFD à hauteur de 205 millions de dollars. Le projet prévoit 8 nouveaux ISEP et la formation de 17 000 apprenants par an à travers le pays, avec un accent sur l'inclusion des femmes.",
+    "siteOfficiel": "https://espoirjeunes.3fpt.sn/",
     "telephone": null,
     "email": null,
     "reseaux": {},
-    "secteurs": [],
-    "filieres": [],
-    "diplomes": [],
+    "secteurs": [
+      "Formation professionnelle technique"
+    ],
+    "filieres": [
+      "Formation professionnelle technique"
+    ],
+    "diplomes": [
+      "DiSEP (Bac+2)",
+      "Certificat de compétence professionnelle"
+    ],
     "niveauAccepte": [
       "Après BAC"
     ],
@@ -4899,6 +4983,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -4929,6 +5014,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -4959,6 +5045,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -4989,6 +5076,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -5019,6 +5107,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -5049,6 +5138,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -5119,6 +5209,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC",
       "BTS"
     ],
@@ -6542,7 +6633,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": "Formations qualifiantes et diplômantes ouvertes aux jeunes dès le niveau BFEM.",
     "region": "Tambacounda",
@@ -6571,7 +6663,8 @@ window.ECOLES_DATA = [
     ],
     "diplomes": [],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": "Formation professionnelle accessible dès le BFEM, orientée vers un public de jeunes filles.",
     "region": "Tambacounda",
@@ -6604,7 +6697,8 @@ window.ECOLES_DATA = [
     ],
     "diplomes": [],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": "Formation professionnelle accessible dès le BFEM.",
     "region": "Sédhiou",
@@ -6637,7 +6731,8 @@ window.ECOLES_DATA = [
     ],
     "diplomes": [],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": "Formation en alternance (dual), accessible dès le BFEM.",
     "region": "Sédhiou",
@@ -6669,6 +6764,7 @@ window.ECOLES_DATA = [
     "diplomes": [],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": "Formation gratuite et professionnalisante, sélection sur motivation, sans condition stricte de diplôme.",
@@ -6740,6 +6836,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC",
       "BTS",
       "Licence"
@@ -6820,7 +6917,8 @@ window.ECOLES_DATA = [
       "Certificat professionnel"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Dakar",
@@ -6854,7 +6952,8 @@ window.ECOLES_DATA = [
       "Certificat professionnel"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Dakar",
@@ -6888,7 +6987,8 @@ window.ECOLES_DATA = [
       "Certificat professionnel"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Dakar",
@@ -6922,7 +7022,8 @@ window.ECOLES_DATA = [
       "Certificat professionnel"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Dakar",
@@ -7024,6 +7125,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -7058,6 +7160,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC",
       "BTS"
     ],
@@ -7137,6 +7240,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -7176,7 +7280,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Kaolack",
@@ -7209,7 +7314,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Kaffrine",
@@ -7240,7 +7346,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Fatick",
@@ -7271,7 +7378,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Fatick",
@@ -7302,7 +7410,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Kédougou",
@@ -7339,7 +7448,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Sédhiou",
@@ -7372,7 +7482,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Sédhiou",
@@ -7407,7 +7518,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Tambacounda",
@@ -7443,6 +7555,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -7474,7 +7587,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Kaolack",
@@ -7505,7 +7619,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Diourbel",
@@ -7536,7 +7651,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Diourbel",
@@ -7569,7 +7685,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Tambacounda",
@@ -7600,7 +7717,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Tambacounda",
@@ -7634,6 +7752,7 @@ window.ECOLES_DATA = [
     ],
     "niveauAccepte": [
       "BFEM",
+      "BT",
       "Après BAC"
     ],
     "admission": null,
@@ -7665,7 +7784,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Fatick",
@@ -7696,7 +7816,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Fatick",
@@ -7727,7 +7848,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Fatick",
@@ -7760,7 +7882,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Kaolack",
@@ -7791,7 +7914,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Louga",
@@ -7822,7 +7946,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Louga",
@@ -7855,7 +7980,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Louga",
@@ -7886,7 +8012,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Louga",
@@ -7917,7 +8044,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Louga",
@@ -7956,7 +8084,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Ziguinchor",
@@ -7989,7 +8118,8 @@ window.ECOLES_DATA = [
       "BEP"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Kolda",
@@ -8446,7 +8576,8 @@ window.ECOLES_DATA = [
       "Baccalauréat"
     ],
     "niveauAccepte": [
-      "BFEM"
+      "BFEM",
+      "BT"
     ],
     "admission": null,
     "region": "Thiès",

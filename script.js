@@ -1,3 +1,25 @@
+/* ---------- Compteur animé (chiffres du hero) ---------- */
+/* Fait défiler un <b> de 0 (ou de sa valeur actuelle) jusqu'à la valeur
+   cible, au lieu de faire un saut brut du chiffre figé dans le HTML vers
+   le chiffre réel calculé depuis ecoles.json. Évite le flash "252 -> 270". */
+function animerCompteur(el, valeurFinale, duree = 1200) {
+  const depart = Number(el.textContent) || 0;
+  if (depart === valeurFinale) {
+    el.textContent = valeurFinale;
+    return;
+  }
+  const debut = performance.now();
+  const easeOutExpo = t => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+  function etape(maintenant) {
+    const t = Math.min((maintenant - debut) / duree, 1);
+    const valeur = Math.round(depart + (valeurFinale - depart) * easeOutExpo(t));
+    el.textContent = valeur;
+    if (t < 1) requestAnimationFrame(etape);
+    else el.textContent = valeurFinale;
+  }
+  requestAnimationFrame(etape);
+}
+
 /* ---------- Menu mobile ---------- */
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.header nav');
@@ -26,6 +48,14 @@ function observeCards(root = document) {
   root.querySelectorAll('.card:not(.visible)').forEach(card => revealObserver.observe(card));
 }
 observeCards();
+
+/* Le 3e chiffre du hero ("2 parcours d'orientation") est une valeur fixe,
+   pas besoin d'attendre ecoles.json : on l'anime dès le chargement. */
+const heroStatParcours = document.getElementById('heroStatParcours');
+if (heroStatParcours) {
+  const cible = Number(heroStatParcours.dataset.countTarget) || 0;
+  animerCompteur(heroStatParcours, cible);
+}
 
 /* ---------- Section active dans la navigation ---------- */
 const navLinks = Array.from(document.querySelectorAll('#mainNav a[href^="#"]'));
@@ -129,7 +159,7 @@ function choisirParcours(parcoursId) {
   if (parcoursId === 'apres_diplome') {
     diplomeChipsEl.innerHTML = DIPLOMES.map(d => `<button type="button" class="diplome-chip" data-diplome="${d.value}">${d.label}</button>`).join('');
     etapeDiplome.hidden = false;
-    etapeDiplome.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    etapeDiplome.scrollIntoView({ behavior: 'smooth', block: 'center' });
   } else {
     etapeMetierIntro.hidden = false;
     construireEtLancerFormulaire();
@@ -154,7 +184,7 @@ diplomeChipsEl.addEventListener('click', (e) => {
   const objectifs = OBJECTIFS_PAR_DIPLOME[etatParcours.diplome] || [];
   objectifChipsEl.innerHTML = objectifs.map(o => `<button type="button" class="objectif-chip" data-objectif="${o.value}">${o.label}</button>`).join('');
   objectifDiplomeWrap.hidden = false;
-  objectifDiplomeWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  objectifDiplomeWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
 objectifChipsEl.addEventListener('click', (e) => {
@@ -176,18 +206,21 @@ document.querySelectorAll('[data-preselect-parcours]').forEach(a => {
 });
 
 /* ---------- Base d'écoles sénégalaises ----------
-   Les écoles sont chargées depuis assets/data/ecoles.json (une école = une ligne).
+   Les écoles sont chargées de façon asynchrone depuis
+   assets/data/ecoles.json via fetch(), pour ne plus bloquer le
+   rendu initial avec un <script> classique de 260 Ko. Le reste du
+   site (menu, formulaires, etc.) reste utilisable pendant que la
+   base d'écoles finit de charger en arrière-plan.
    Pour ajouter une école : ouvrir ce fichier JSON et ajouter une entrée
    { "ville": "...", "domaine": "technologie|gestion|social|creatif", "nom": "..." }
-   Aucune autre modification du code n'est nécessaire. */
+   Aucune autre modification du code n'est nécessaire.
+   Remarque : fetch() ne fonctionne pas en ouvrant index.html en
+   double-clic (protocole file://) — il faut un vrai serveur (Vercel,
+   ou "npx serve" / "python -m http.server" en local). window.ECOLES_DATA
+   reste disponible comme filet de sécurité si jamais assets/data/ecoles-data.js
+   est réintroduit dans la page. */
 const rawEcolesPromise = (window.ECOLES_DATA && window.ECOLES_DATA.length)
-  // Chemin principal : les données sont déjà en mémoire grâce à
-  // assets/data/ecoles-data.js (chargé en <script> classique dans index.html).
-  // Ça fonctionne même en ouvrant le fichier en double-clic (file://), car il
-  // n'y a plus de requête réseau/fetch impliquée.
   ? Promise.resolve(window.ECOLES_DATA)
-  // Filet de sécurité : si jamais ecoles-data.js n'est pas chargé, on retente
-  // via fetch (fonctionne seulement derrière un vrai serveur http/https).
   : fetch('assets/data/ecoles.json')
       .then(r => {
         if (!r.ok) throw new Error('Réponse HTTP ' + r.status);
@@ -195,8 +228,9 @@ const rawEcolesPromise = (window.ECOLES_DATA && window.ECOLES_DATA.length)
       })
       .catch(err => {
         console.error(
-          "Impossible de charger la base d'écoles. Vérifie que assets/data/ecoles-data.js " +
-          "est bien présent et chargé avant script.js dans index.html.",
+          "Impossible de charger la base d'écoles depuis assets/data/ecoles.json. " +
+          "Vérifie que le site tourne bien sur un vrai serveur http(s) (fetch() ne " +
+          "fonctionne pas en ouvrant le fichier en double-clic, protocole file://).",
           err
         );
         return [];
@@ -379,8 +413,10 @@ function afficherCarteResultat(d) {
       </div>
       ${d.radar ? '<canvas id="profilRadar"></canvas>' : ''}
       <div class="result-actions">
+        <button type="button" class="btn-secondary" id="partagerResultat">${Icons.svg('share-2', { class: 'icon-inline' })} Partager mon résultat</button>
         <button type="button" class="btn-secondary" id="refaireLeTest">${Icons.svg('rotate-ccw', { class: 'icon-inline' })} Refaire le test</button>
       </div>
+      <p class="result-share-status" id="partagerStatus" role="status" aria-live="polite"></p>
     </div>
   `;
 
@@ -394,6 +430,32 @@ function afficherCarteResultat(d) {
     const lien = item.querySelector('.ecole-reco-lien');
     if (lien) lien.addEventListener('click', () => ouvrirModaleEcole(ecole));
   });
+
+  const boutonPartager = resultSection.querySelector('#partagerResultat');
+  const partagerStatus = resultSection.querySelector('#partagerStatus');
+  if (boutonPartager) {
+    boutonPartager.addEventListener('click', async () => {
+      const texte = `Mon orientation sur Parcourio : ${d.titre} (${d.correspondance}). Découvre la tienne, c'est gratuit :`;
+      const url = 'https://www.parcourio.com/';
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: 'Mon orientation Parcourio', text: texte, url });
+        } catch (err) {
+          /* Partage annulé par la personne : rien à faire */
+        }
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(`${texte} ${url}`);
+        if (partagerStatus) {
+          partagerStatus.textContent = 'Lien copié — tu peux le coller où tu veux !';
+          setTimeout(() => { partagerStatus.textContent = ''; }, 4000);
+        }
+      } catch (err) {
+        if (partagerStatus) partagerStatus.textContent = url;
+      }
+    });
+  }
 
   const boutonRefaire = resultSection.querySelector('#refaireLeTest');
   if (boutonRefaire) {
@@ -845,8 +907,6 @@ rawEcolesPromise.then(liste => {
   const chips = document.querySelectorAll('.domaine-chip');
   const typeChips = document.querySelectorAll('.type-chip');
   const niveauChips = document.querySelectorAll('.niveau-chip');
-  const implantationChips = document.querySelectorAll('.implantation-chip');
-  const implantationFilterGroup = document.getElementById('implantationFilterGroup');
   const favorisToggle = document.getElementById('favorisToggle');
   const toggleBtn = document.getElementById('ecolesToggleBtn');
 
@@ -854,13 +914,6 @@ rawEcolesPromise.then(liste => {
 
   const ecoles = liste.filter(e => e.ville && e.domaine && e.nom);
   ecoles.forEach(e => { if (e.id) ecolesIndex[e.id] = e; });
-
-  /* Le filtre Siège / Campus n'apparaît que si le jeu de données contient
-     effectivement des établissements multi-implantations : inutile de
-     montrer ce filtre tant qu'aucune école n'a de groupeId renseigné. */
-  if (implantationFilterGroup && ecoles.some(e => e.implantation)) {
-    implantationFilterGroup.hidden = false;
-  }
 
   /* Chiffres du hero et de la phrase d'intro de la section Écoles :
      recalculés à partir du nombre réel d'entrées dans ecoles.json, pour ne
@@ -870,8 +923,8 @@ rawEcolesPromise.then(liste => {
   const nbRegions = new Set(ecoles.map(e => e.region).filter(Boolean)).size;
   const heroStatEcoles = document.getElementById('heroStatEcoles');
   const heroStatRegions = document.getElementById('heroStatRegions');
-  if (heroStatEcoles) heroStatEcoles.textContent = nbEcoles;
-  if (heroStatRegions) heroStatRegions.textContent = nbRegions;
+  if (heroStatEcoles) animerCompteur(heroStatEcoles, nbEcoles);
+  if (heroStatRegions) animerCompteur(heroStatRegions, nbRegions);
   const introCount = document.getElementById('ecolesSectionIntroCount');
   const introRegions = document.getElementById('ecolesSectionIntroRegions');
   if (introCount) introCount.textContent = nbEcoles;
@@ -895,11 +948,11 @@ rawEcolesPromise.then(liste => {
     });
   }
 
-  const etat = { recherche: '', ville: '', region: '', domaine: '', type: '', niveau: '', implantation: '', favorisSeuls: false, aAfficheTout: false };
+  const etat = { recherche: '', ville: '', region: '', domaine: '', type: '', niveau: '', favorisSeuls: false, aAfficheTout: false };
   etatDirectoire = etat;
 
   function filtresActifs() {
-    return !!(etat.recherche || etat.ville || etat.region || etat.domaine || etat.type || etat.niveau || etat.implantation || etat.favorisSeuls);
+    return !!(etat.recherche || etat.ville || etat.region || etat.domaine || etat.type || etat.niveau || etat.favorisSeuls);
   }
 
   function reinitialiserEtMasquer() {
@@ -909,7 +962,6 @@ rawEcolesPromise.then(liste => {
     etat.domaine = '';
     etat.type = '';
     etat.niveau = '';
-    etat.implantation = '';
     etat.favorisSeuls = false;
     etat.aAfficheTout = false;
 
@@ -919,7 +971,6 @@ rawEcolesPromise.then(liste => {
     chips.forEach(c => c.classList.toggle('is-active', c.dataset.domaine === ''));
     typeChips.forEach(c => c.classList.toggle('is-active', c.dataset.type === ''));
     niveauChips.forEach(c => c.classList.toggle('is-active', c.dataset.niveau === ''));
-    implantationChips.forEach(c => c.classList.toggle('is-active', c.dataset.implantation === ''));
     if (favorisToggle) {
       favorisToggle.setAttribute('aria-pressed', 'false');
       favorisToggle.querySelector('.favoris-toggle-icon').innerHTML = Icons.svg('star');
@@ -976,7 +1027,6 @@ rawEcolesPromise.then(liste => {
       if (etat.domaine && e.domaine !== etat.domaine) return false;
       if (etat.type && e.type !== etat.type) return false;
       if (etat.niveau && !(e.niveauAccepte || []).includes(etat.niveau)) return false;
-      if (etat.implantation && e.implantation !== etat.implantation) return false;
       if (rechercheNorm) {
         const cible = normaliser([e.nom, e.sigle || '', ...(e.secteurs || [])].join(' '));
         if (!cible.includes(rechercheNorm)) return false;
@@ -1102,6 +1152,7 @@ rawEcolesPromise.then(liste => {
     });
   });
 
+
   if (favorisToggle) {
     favorisToggle.addEventListener('click', () => {
       etat.favorisSeuls = !etat.favorisSeuls;
@@ -1204,5 +1255,27 @@ if (contactForm) {
       submitBtn.disabled = false;
       submitBtn.textContent = texteOriginal;
     }
+  });
+}
+
+/* ---------- Bouton retour en haut ---------- */
+const backToTopBtn = document.getElementById('backToTop');
+if (backToTopBtn) {
+  const toggleBackToTop = () => {
+    backToTopBtn.classList.toggle('is-visible', window.scrollY > 500);
+  };
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ---------- Enregistrement du service worker (PWA) ---------- */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch((err) => {
+      console.error('Échec de l\'enregistrement du service worker', err);
+    });
   });
 }
