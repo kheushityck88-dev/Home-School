@@ -1,25 +1,3 @@
-/* ---------- Compteur animé (chiffres du hero) ---------- */
-/* Fait défiler un <b> de 0 (ou de sa valeur actuelle) jusqu'à la valeur
-   cible, au lieu de faire un saut brut du chiffre figé dans le HTML vers
-   le chiffre réel calculé depuis ecoles.json. Évite le flash "252 -> 270". */
-function animerCompteur(el, valeurFinale, duree = 1200) {
-  const depart = Number(el.textContent) || 0;
-  if (depart === valeurFinale) {
-    el.textContent = valeurFinale;
-    return;
-  }
-  const debut = performance.now();
-  const easeOutExpo = t => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
-  function etape(maintenant) {
-    const t = Math.min((maintenant - debut) / duree, 1);
-    const valeur = Math.round(depart + (valeurFinale - depart) * easeOutExpo(t));
-    el.textContent = valeur;
-    if (t < 1) requestAnimationFrame(etape);
-    else el.textContent = valeurFinale;
-  }
-  requestAnimationFrame(etape);
-}
-
 /* ---------- Menu mobile ---------- */
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.header nav');
@@ -48,14 +26,6 @@ function observeCards(root = document) {
   root.querySelectorAll('.card:not(.visible)').forEach(card => revealObserver.observe(card));
 }
 observeCards();
-
-/* Le 3e chiffre du hero ("2 parcours d'orientation") est une valeur fixe,
-   pas besoin d'attendre ecoles.json : on l'anime dès le chargement. */
-const heroStatParcours = document.getElementById('heroStatParcours');
-if (heroStatParcours) {
-  const cible = Number(heroStatParcours.dataset.countTarget) || 0;
-  animerCompteur(heroStatParcours, cible);
-}
 
 /* ---------- Section active dans la navigation ---------- */
 const navLinks = Array.from(document.querySelectorAll('#mainNav a[href^="#"]'));
@@ -915,20 +885,26 @@ rawEcolesPromise.then(liste => {
   const ecoles = liste.filter(e => e.ville && e.domaine && e.nom);
   ecoles.forEach(e => { if (e.id) ecolesIndex[e.id] = e; });
 
+  /* Si la base est vide alors qu'on est ouvert en double-clic (protocole
+     file://), ce n'est pas "0 école" mais fetch() qui ne peut pas marcher
+     sans serveur : on l'explique clairement au lieu de laisser croire à
+     un bug du filtre. */
+  if (ecoles.length === 0 && location.protocol === 'file:') {
+    countEl.textContent = 'Base d\'écoles non chargée';
+    if (toggleBtn) toggleBtn.style.display = 'none';
+    grid.innerHTML = `<p class="directory-empty-local">
+      La liste des écoles ne peut pas se charger en ouvrant ce fichier directement (double-clic, protocole <code>file://</code>).
+      Lance un petit serveur local pour tester, par exemple <code>npx serve</code> ou <code>python -m http.server</code> dans le dossier du site, puis ouvre l'adresse affichée dans le terminal.
+    </p>`;
+    return;
+  }
+
   /* Chiffres du hero et de la phrase d'intro de la section Écoles :
-     recalculés à partir du nombre réel d'entrées dans ecoles.json, pour ne
-     jamais afficher un total figé (ex. "206") qui deviendrait faux dès
-     qu'on ajoute ou retire une école du fichier. */
-  const nbEcoles = ecoles.length;
-  const nbRegions = new Set(ecoles.map(e => e.region).filter(Boolean)).size;
-  const heroStatEcoles = document.getElementById('heroStatEcoles');
-  const heroStatRegions = document.getElementById('heroStatRegions');
-  if (heroStatEcoles) animerCompteur(heroStatEcoles, nbEcoles);
-  if (heroStatRegions) animerCompteur(heroStatRegions, nbRegions);
-  const introCount = document.getElementById('ecolesSectionIntroCount');
-  const introRegions = document.getElementById('ecolesSectionIntroRegions');
-  if (introCount) introCount.textContent = nbEcoles;
-  if (introRegions) introRegions.textContent = nbRegions;
+     fixes, écrits en dur dans le HTML (index.html) — plus recalculés ni
+     réécrits par le JS ici, pour éviter tout flash au chargement.
+     Si le nombre d'écoles ou de régions change dans ecoles.json, mettre
+     à jour à la main les chiffres dans index.html (ids heroStatEcoles,
+     heroStatRegions, ecolesSectionIntroCount, ecolesSectionIntroRegions). */
 
   const villes = [...new Set(ecoles.map(e => e.ville))].sort((a, b) => a.localeCompare(b, 'fr'));
   villes.forEach(ville => {
